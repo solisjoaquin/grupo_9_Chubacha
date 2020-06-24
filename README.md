@@ -2,4 +2,4 @@
 ## Descripcion
 
 
-##Informacion del grupo
+## Informacion del grupo

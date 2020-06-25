@@ -1,5 +1,5 @@
 
-## Proyecto   "CHUBACHA Tecnologia de Otra Galaxia"
+## Proyecto   CHUBACHA "Tecnologia de Otra Galaxia"
 
 ## ¿Qué productos o servicios brindará nuestro sitio?
     Los productos que ofreceremos serán los relacionados al rubro informatico 
@@ -13,8 +13,9 @@
             -	Camaras Web
 
 ## ¿Quién será nuestra audiencia objetivo? 
-        Nuestros clientes o nicho de mercado serán todos los usuarios de hogares que actualmente
-        estén con la necesidad de comprar, reemplazar o renovar los periféricos de su equipo informatico.
+        Nuestros clientes o nicho de mercado serán todos los usuarios de hogares que 
+        actualmente estén con la necesidad de comprar, reemplazar o renovar los periféricos 
+        de su equipo informatico.
 
 ## ¿Cómo ajustaremos nuestra oferta a ese público?
         Haremos especial énfasis en remarcar la estética y la calidad de nuestros productos, 

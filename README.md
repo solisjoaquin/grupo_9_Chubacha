@@ -24,11 +24,21 @@
 
 ## Descripcion individual de los participantes 
 
-        Eric:
+        Eric Ogieglo:
 
         Soy de Lanus, me gusta jugar al futbol, hacer natación. 
         Estoy muy entusiasmado con la idea 
         de dedicarme a la programación.
+
+        Carlos Martín Almeida: 
+        
+        tengo 38 años, soy deportista de casi toda la vida, he competido en alto rendimiento,
+        tuve la oportunidad y la suerte de ser jugador de Vóley profesional, y jugador de 
+        Fútbol semi-profesional. Casi toda mi vida estuve (aún lo estoy) rodeado del deporte,
+        la formación y la competencia. 
+        Soy Técnico Nacional de Voley Playa (Beach Vóley), estoy a punto de recibirme de Coach Profesional, en la formación de Coaching Ontológico, y estoy con mucho interés en 
+        aprender en este curso de Programador Web Full Stack. Soy padre de dos niñas hermosas,
+        y es una de las profesiones que más amo experimentarla!
 
 
 ## Referentes de Mercado y por que fueron elegidos
@@ -37,7 +47,10 @@
 -	Carrefour     https://www.carrefour.com.ar/informatica/teclados-y-mouse.html
 -	Garbarino     https://www.garbarino.com/productos/teclados/4544
 -	Compumundo    https://www.compumundo.com.ar/productos/teclados/4714
+
 -	 Matrox       http://www.matroxdigital.com.ar/
+
+        La página elegida fue por la simpleza en la estructura, por el menú práctico y bien visible, por indicaciones claras, y por tener los productos visualmente agradable. 
 
 
 .....

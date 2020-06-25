@@ -6,7 +6,8 @@
 ## Informacion del proyecto CHUBACHA Tecnologia de Otra Galaxia
 
 ## ¿Qué productos o servicios brindará nuestro sitio?
-    Los productos que ofreceremos serán los relacionados al rubro informatico de accesorios de computadoras de Escritorio, Notebooks, Netbooks.
+    Los productos que ofreceremos serán los relacionados al rubro informatico 
+    de accesorios de computadoras de Escritorio, Notebooks, Netbooks.
         
         Perifericos como por ejemplo:
             -	Teclado
@@ -15,7 +16,7 @@
             -	Auriculares
             -	Camaras Web
 
-## ¿Quién será nuestra audienciaobjetivo? 
+## ¿Quién será nuestra audiencia objetivo? 
         Nuestros clientes o nicho de mercado serán todos los usuarios de hogares que actualmente
         estén con la necesidad de comprar, reemplazar o renovar los periféricos de su equipo informatico.
 

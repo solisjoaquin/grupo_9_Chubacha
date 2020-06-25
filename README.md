@@ -2,8 +2,8 @@
 ## Proyecto   CHUBACHA "Tecnologia de Otra Galaxia"
 
 ## ¿Qué productos o servicios brindará nuestro sitio?
-    Los productos que ofreceremos serán los relacionados al rubro informatico 
-    de accesorios de computadoras de Escritorio, Notebooks, Netbooks.
+    Los productos que ofreceremos a la venta serán los relacionados al rubro 
+    informatico de accesorios de computadoras de Escritorio, Notebooks, Netbooks.
         
         Perifericos como por ejemplo:
             -	Teclado
@@ -19,7 +19,8 @@
 
 ## ¿Cómo ajustaremos nuestra oferta a ese público?
         Haremos especial énfasis en remarcar la estética y la calidad de nuestros productos, 
-        como asi también la posibilidad de llevar un combo de productos según sea la necesidad.
+        como asi también la garantia extendida y la posibilidad de llevar un combo de 
+        productos con un descuento según sea la necesidad.
 
 ## Descripcion individual de los participantes 
 

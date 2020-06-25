@@ -1,9 +1,5 @@
-# Grupo 9 MJE    https://github.com/solisjoaquin/grupo_9_MJE
-## Descripcion
 
-.....
-
-## Informacion del proyecto CHUBACHA Tecnologia de Otra Galaxia
+## Proyecto   "CHUBACHA Tecnologia de Otra Galaxia"
 
 ## ¿Qué productos o servicios brindará nuestro sitio?
     Los productos que ofreceremos serán los relacionados al rubro informatico 
@@ -26,9 +22,11 @@
 
 ## Descripcion individual de los participantes 
 
-    Eric:
-    Soy de Lanus, me gusta jugar al futbol, hacer natación. Estoy muy entusiasmado con la idea 
-    de dedicarme a la programación.
+        Eric:
+
+        Soy de Lanus, me gusta jugar al futbol, hacer natación. 
+        Estoy muy entusiasmado con la idea 
+        de dedicarme a la programación.
 
 
 ## Referentes de Mercado y por que fueron elegidos

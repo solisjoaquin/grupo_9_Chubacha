@@ -37,7 +37,8 @@
         Fútbol semi-profesional. Casi toda mi vida estuve (aún lo estoy) rodeado del deporte,
         la formación y la competencia. 
 
-        Soy Técnico Nacional de Voley Playa (Beach Vóley),estoy a punto de recibirme de Coach Profesional, en la formación de Coaching Ontológico, y estoy con mucho interés en 
+        Soy Técnico Nacional de Voley Playa (Beach Vóley),estoy a punto de recibirme de 
+        Coach Profesional, en la formación de Coaching Ontológico, y estoy con mucho interés en 
         aprender en este curso de Programador Web Full Stack. Soy padre de dos niñas hermosas,
         y es una de las profesiones que más amo experimentarla!
 

@@ -41,6 +41,11 @@
         Coach Profesional, en la formación de Coaching Ontológico, y estoy con mucho interés en 
         aprender en este curso de Programador Web Full Stack. Soy padre de dos niñas hermosas,
         y es una de las profesiones que más amo experimentarla!
+        
+        Joaquin Solis:
+        Tengo 26 años, asi como el resto de mi equipo me gusta el deporte, hincha de River.
+        Tambien con muchas ganas de dedicarme a la programacion. Actualmente vivo en Comodoro
+        Rivadavia, Chubut.
 
 
 ## Referentes de Mercado y por que fueron elegidos

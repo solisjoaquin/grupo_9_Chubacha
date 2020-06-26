@@ -1,7 +1,7 @@
 ##   CHUBACHA "Tecnologia de Otra Galaxia"   
 
-(AQUI PODEMOS OBSERVAR GRAFICAMENTE LA LOGISTICA DE NUESTROS 
-                        PRODUCTOS HASTA QUE LLEGA AL HOGAR)
+# (AQUI PODEMOS OBSERVAR GRAFICAMENTE LA LOGISTICA DE NUESTROS 
+# PRODUCTOS HASTA QUE LLEGA AL HOGAR)
 
 🌌 - Los producto se fabrican en la Galaxia NGC 6753 
 🛸 - Luego un OVNI Container los lleva a un punto intermedio en Saturno para su distribucion

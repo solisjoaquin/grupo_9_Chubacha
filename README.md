@@ -62,7 +62,8 @@
 
          
 
-# Queres seguir nuestro proyecto Chuck Norris? 
+# Queres seguir nuestro proyecto Chuck Norris?  😝 🥳 👁‍🗨
+
 
 Seguimiento: [TRELLO](https://trello.com/b/pFPJKMHB/grupo-9chubacha)
 

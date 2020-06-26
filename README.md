@@ -1,7 +1,18 @@
 ##   CHUBACHA "Tecnologia de Otra Galaxia"   
 
-🌌🛸🪐🚀🌍🚁🏭🚚🏠 (AQUI PODEMOS OBSERVAR GRAFICAMENTE LA LOGISTICA DE NUESTROS 
+(AQUI PODEMOS OBSERVAR GRAFICAMENTE LA LOGISTICA DE NUESTROS 
                         PRODUCTOS HASTA QUE LLEGA AL HOGAR)
+
+🌌 - Los producto se fabrican en la Galaxia NGC 6753 
+🛸 - Luego un OVNI Container los lleva a un punto intermedio en Saturno para su distribucion
+🪐 - De Saturno sale para todos los demas planetas de la Via Lactea
+🚀 - Un Cohete de Space X se encarga de traerlo a la Tierra
+🌍 - El Cohete llega con la mercaderia y queda depositada en Villa La Angostura
+🚁 - Un Helicoptero la lleva a cada uno de los depositos que tenemos
+🏭 - En el deposito se hace un control de la mercaderia y se prepara para despachar
+🚚 - Un Flete Terrestre se encarga luego de retirar
+🏠 - Finalmente el pedido es entregado al primer Terricola que abra la puerta
+
 
 ## ¿Qué productos o servicios brindará nuestro sitio?   🎮🕹🔊⌨🖱🎚
     Los productos que ofreceremos a la venta serán los relacionados al rubro 

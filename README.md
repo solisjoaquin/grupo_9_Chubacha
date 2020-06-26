@@ -55,9 +55,8 @@
 | Referente | Motivo | Web |
 | --------- | ------ | --- |
 | Falabella | La pagina ofrece amplia variedad y da muestra de una sobria eleccion en la calidad de productos | [Visitar](https://www.falabella.com.ar/falabella-ar/category/cat10174/) |
--	Falabella     https://www.falabella.com.ar/falabella-ar/category/cat10174/Accesorios-computacion
+| Carrefour | La pagina es muy organizada y concisa, ademas de que la paleta de colores es excelente | [Visitar](https://www.carrefour.com.ar/informatica/teclados-y-mouse.html) |
 
--	Carrefour     https://www.carrefour.com.ar/informatica/teclados-y-mouse.html
 -	Garbarino     https://www.garbarino.com/productos/teclados/4544
 -	Compumundo    https://www.compumundo.com.ar/productos/teclados/4714
 

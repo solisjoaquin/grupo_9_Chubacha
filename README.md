@@ -1,18 +1,5 @@
 ##   CHUBACHA "Tecnologia de Otra Galaxia"   
 
-## Logistica Grafica de como llegan nuestros productos a nuestros clientes:
-
-🌌 - Los producto se fabrican en la Galaxia NGC 6753 
-🛸 - Luego un OVNI Container los lleva a un punto intermedio en Saturno para su distribucion
-🪐 - De Saturno sale para todos los demas planetas de la Via Lactea
-🚀 - Un Cohete de Space X se encarga de traerlo a la Tierra
-🌍 - El Cohete llega con la mercaderia y queda depositada en Villa La Angostura
-🚁 - Un Helicoptero la lleva a cada uno de los depositos que tenemos
-🏭 - En el deposito se hace un control de la mercaderia y se prepara para despachar
-🚚 - Un Flete Terrestre se encarga luego de retirar
-🏠 - Finalmente el pedido es entregado al primer Terricola que abra la puerta
-
-
 ## ¿Qué productos o servicios brindará nuestro sitio?   🎮🕹🔊⌨🖱🎚
     Los productos que ofreceremos a la venta serán los relacionados al rubro 
     informatico de accesorios de computadoras de Escritorio, Notebooks, Netbooks.
@@ -33,6 +20,21 @@
         Haremos especial énfasis en remarcar la estética y la calidad de nuestros productos, 
         como asi también la garantia extendida y la posibilidad de llevar un combo de 
         productos con un descuento según sea la necesidad.
+
+
+
+## Logistica Grafica de como llegan nuestros productos a nuestros clientes:
+
+🌌  Los producto se fabrican en la Galaxia NGC 6753 
+🛸  Luego un OVNI Container los lleva a un punto intermedio en Saturno para su distribucion
+🪐  De Saturno sale para todos los demas planetas de la Via Lactea
+🚀  Un Cohete de Space X se encarga de traerlo a la Tierra
+🌍  El Cohete llega con la mercaderia y queda depositada en Villa La Angostura
+🚁  Un Helicoptero la lleva a cada uno de los depositos que tenemos
+🏭  En el deposito se hace un control de la mercaderia y se prepara para despachar
+🚚  Un Flete Terrestre se encarga luego de retirar
+🏠  Finalmente el pedido es entregado al primer Terricola que abra la puerta
+
 
 ## Descripcion individual de los participantes   ^_^
 

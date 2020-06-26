@@ -1,7 +1,7 @@
 ##   CHUBACHA "Tecnologia de Otra Galaxia"   
 
-# (AQUI PODEMOS OBSERVAR GRAFICAMENTE LA LOGISTICA DE NUESTROS 
-# PRODUCTOS HASTA QUE LLEGA AL HOGAR)
+## Logistica Grafica de como llegan nuestros productos a nuestros clientes:
+
 🌌 - Los producto se fabrican en la Galaxia NGC 6753 
 🛸 - Luego un OVNI Container los lleva a un punto intermedio en Saturno para su distribucion
 🪐 - De Saturno sale para todos los demas planetas de la Via Lactea

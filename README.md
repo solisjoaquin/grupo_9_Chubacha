@@ -56,13 +56,11 @@
 | --------- | ------ | --- |
 | Falabella | La pagina ofrece amplia variedad y da muestra de una sobria eleccion en la calidad de productos | [Visitar](https://www.falabella.com.ar/falabella-ar/category/cat10174/) |
 | Carrefour | La pagina es muy organizada y concisa, ademas de que la paleta de colores es excelente | [Visitar](https://www.carrefour.com.ar/informatica/teclados-y-mouse.html) |
+| Garbarino | La pagina ofrece simpleza a la hora de mostrar los productos y un buen filtro | [Visitar](https://www.garbarino.com/productos/teclados/4544) |
+| Genius | La pagina ofrece una buena muestra de imagenes de los productos | [Visitar](http://ar.geniusnet.com/) |
+| Matrox | La página elegida fue por la simpleza en la estructura, por el menú práctico y bien visible, por indicaciones claras, y por tener los productos visualmente agradable. | [Visitar](http://www.matroxdigital.com.ar/) |    
 
--	Garbarino     https://www.garbarino.com/productos/teclados/4544
--	Compumundo    https://www.compumundo.com.ar/productos/teclados/4714
-
--	 Matrox       http://www.matroxdigital.com.ar/
-
-        La página elegida fue por la simpleza en la estructura, por el menú práctico y bien visible, por indicaciones claras, y por tener los productos visualmente agradable. 
+         
 
 
 Seguimiento: https://trello.com/b/pFPJKMHB/grupo-9chubacha

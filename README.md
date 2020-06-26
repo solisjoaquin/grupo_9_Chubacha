@@ -25,7 +25,7 @@
 
 ## Logistica de como llegan nuestros productos a nuestros clientes:
 
-        🌌 Los productos se fabrican en la [Galaxia NGC 6753](https://www.ecured.cu/Galaxia_NGC_6753) 
+        🌌 Los productos se fabrican en la Galaxia NGC 6753
         🛸 Luego un OVNI Container los lleva a un punto intermedio en Saturno para su distribucion
         🪐 De Saturno sale para todos los demas planetas de la Via Lactea
         🚀 Un Cohete de Space X se encarga de traerlo a la Tierra

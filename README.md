@@ -62,7 +62,8 @@
 
          
 
+# Queres seguir nuestro proyecto Chuck Norris? 
 
-Seguimiento: https://trello.com/b/pFPJKMHB/grupo-9chubacha
+Seguimiento: [TRELLO](https://trello.com/b/pFPJKMHB/grupo-9chubacha)
 
-Prototipo Wireframe Online: (Pendiente de realizar)
+

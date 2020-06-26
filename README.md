@@ -63,5 +63,6 @@
         La página elegida fue por la simpleza en la estructura, por el menú práctico y bien visible, por indicaciones claras, y por tener los productos visualmente agradable. 
 
 
-Seguimiento: 
+Seguimiento: https://trello.com/b/pFPJKMHB/grupo-9chubacha
+
 Prototipo Wireframe Online: (Pendiente de realizar)

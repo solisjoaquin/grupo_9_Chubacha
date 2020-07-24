@@ -33,4 +33,5 @@
 
 | Estrellita                                            |
 | ----------------------------------------------------- |
-| _¿Querés ver nuestra happy estrella con sus notitas?_ | [SoyChusma](https://jamboard.google.com/d/1CfQ5_MwVa0ECRG-j5WzafQ-ExpHkV2EDER56sI8WOm0/viewer?f=0) |
+| _¿Querés ver nuestra happy estrella con sus notitas?_ |
+[SoyChusma](https://jamboard.google.com/d/1CfQ5_MwVa0ECRG-j5WzafQ-ExpHkV2EDER56sI8WOm0/viewer?f=0)

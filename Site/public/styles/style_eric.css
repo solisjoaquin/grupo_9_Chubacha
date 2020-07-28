@@ -1,0 +1,409 @@
+
+/* Importar fuente Poppins desde Google fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+
+/*Elementos del header*/
+
+
+nav {
+  background: rgb(247, 154, 16);
+  height: 80px;
+  width: 100%;
+}
+
+/*Logo del sitio, en este caso viene siendo solo el nombre hecho con texto */
+label.logo {
+  color: #f2f2f2;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 0 140px;
+  font-weight: 600;
+}
+
+
+/* El unurder list dentro del nav */
+nav ul {
+  float: right;
+  margin-right: 60px;
+}
+
+/*Cada elemento de la lista del ul dentro del nav */
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+}
+
+/*Cada link dentro en cada li, para modificar el texto */
+
+nav ul li a {
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+/*El boton de register tiene un color distinto para sobresalir*/
+a.register {
+  background: rgb(247, 154, 16);
+}
+
+
+/* Como se ve el link que esta activo y el hover*/
+a.active,
+a:hover
+ {
+  background: linear-gradient();
+  transition: .5s;
+}
+
+
+
+/* Detalles del menu hamburguesa*/
+.checkbtn {
+  font-size: 30px;
+  color: #2A4747;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/*El menu hamburguesa esta hecho con un checkbox, pero el check esta oculto */
+#check {
+  display: none;
+}
+
+
+
+/* Este el container del medio, no es ni del footer ni del header, no afecta esos elementos*/
+
+.imagen {
+  width: 100%;
+  height: auto;
+}
+
+.primeraseccion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.primeraseccion > div img{
+  background-color: #a8a8a8;
+  width: 100%;
+  height: auto;
+}
+
+.content1 {
+  flex: auto;
+  position: relative;
+  text-align: center;
+  padding: auto;
+  border: 15px;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.content1 .text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: rgb(247, 154, 16);
+}
+
+.content1 .p {
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #202020;
+}
+
+
+/*Elementos del footer */
+
+
+footer {
+  bottom: 0px;
+  width: 100%;
+  background:rgb(247, 154, 16);
+}
+
+/*Crea un elemnto div dentro del footer para convertirlo en flex*/
+.main-content {
+  display: flex;
+}
+
+/*Cada elemento del footer lo define como un box, hay 3 boxes, izq, centro y derecha*/
+
+.main-content .box {
+  
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px 20px;
+  background: rgb(247, 154, 16);
+}
+
+/* Cada titulo (h2) dentro de cada box*/
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color:black;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content:before {
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #a8a8a8;
+
+}
+
+/*Linea corta sobre la linea mas fina*/
+.box .content:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: white;
+  top: -10px;
+}
+
+.left .content p {
+  text-align: justify;
+  color: white;
+}
+
+/*Estos elementos son para las redes sociales*/
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+  padding: 0 2px;
+}
+
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: #2c3e50;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.left .content .social a span:hover {
+  background: black;
+}
+
+.center .content .fas {
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/*hover sobre los botones de informacion, no de redes sociales*/
+.center .content .fas:hover {
+  background: #2c3e50;
+}
+
+.center .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.center .content .phone {
+  margin: 15px 0;
+}
+
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+
+.right form .msg {
+  margin-top: 10px;
+  color: black;
+  border: none;
+}
+
+.right form input,
+.right form .msgForm {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: white;
+  padding-left: 10px;
+  border: none;
+  color: #000;
+}
+
+.right form input:focus,
+.right form .msgForm:focus {
+  outline-color: #3498db;
+  color: black;
+}
+
+textarea {
+  color: black;
+  border: none;
+}
+
+.right form input {
+  height: 35px;
+}
+
+.right form .btn {
+  margin-top: 10px;
+}
+
+/*Color del buton de envio de formulario*/
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #2c3e50;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+/*hover del boton de envio de formulario*/
+.right form .btn button:hover {
+  background: #000;
+}
+
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+
+.bottom center span {
+  color: #656565;
+}
+
+.bottom center a {
+  color: black;
+  text-decoration: none;
+}
+
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*Cambios en la pagina al cambiar el tamaño de pantalla*/
+@media screen and (max-width: 1000px) {
+
+
+  /*Elementos responsive del header */
+  label.logo {
+    font-size: 27px;
+    padding-left: 25px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+
+  }
+
+
+  .checkbtn {
+    display: block;
+    margin-right: 40px;
+  }
+
+  ul {
+
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    position: absolute;
+
+    z-index: 10;
+
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+
+  }
+
+
+  #check:checked~ul {
+    left: 0;
+  }
+
+  /*elementos responsive del footer*/
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: white;
+  }
+
+  .main-content .box {
+    margin: 5px 0;
+    
+  }
+
+}
+

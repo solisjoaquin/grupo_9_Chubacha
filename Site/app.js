@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'));
 
 //Pedido a pagina Home
 app.get('/', (req, res) => {
@@ -28,7 +29,7 @@ app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/views/login.html')
 });
 
-app.listen(3000, () => {
+app.listen(3002, () => {
     console.log('probando el servidor');
 });
 

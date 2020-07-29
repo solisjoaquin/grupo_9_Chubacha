@@ -16,10 +16,14 @@
 
 
 /*Elementos del header*/
-
+.imgheader {
+  max-width: 100%;
+  max-height: max-content;
+}
 
 nav {
-  background: rgb(247, 154, 16);
+  background: orangered;
+  opacity: 0.9;
   height: 80px;
   width: 100%;
 }
@@ -60,7 +64,8 @@ nav ul li a {
 
 /*El boton de register tiene un color distinto para sobresalir*/
 a.register {
-  background: rgb(247, 154, 16);
+  background: orangered;
+  opacity: 0.9;
 }
 
 
@@ -77,7 +82,7 @@ a:hover
 /* Detalles del menu hamburguesa*/
 .checkbtn {
   font-size: 30px;
-  color: #2A4747;
+  color: #2a6666;
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -96,45 +101,30 @@ a:hover
 
 .imagen {
   width: 100%;
-  height: auto;
-}
-
-.primeraseccion {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  
-}
-
-.primeraseccion > div img{
-  background-color: #a8a8a8;
-  width: 100%;
-  height: auto;
-}
-
-.content1 {
-  flex: auto;
-  position: relative;
-  text-align: center;
-  padding: auto;
-  border: 15px;
-  width: 100%;
   height: 100%;
-  
 }
 
-.content1 .text {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: rgb(247, 154, 16);
+.primera-division-imagenes {
+  display: flex;
+  max-width: 1000px;  
+  flex-wrap: wrap;
+  margin: 100px;
+
 }
 
-.content1 .p {
-  font-size: 2.1875rem;
-  font-weight: 600;
-  color: #202020;
+.imgmain {
+  width: auto;
+  height: auto;
+  border-style:outset;
+  text-align: center;
 }
+
+.buttondetails {
+  border-color: yellow;
+  background-color: blue;
+}
+
+
 
 
 /*Elementos del footer */
@@ -143,7 +133,7 @@ a:hover
 footer {
   bottom: 0px;
   width: 100%;
-  background:rgb(247, 154, 16);
+  background:black;
 }
 
 /*Crea un elemnto div dentro del footer para convertirlo en flex*/
@@ -158,7 +148,8 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   padding: 10px 20px;
-  background: rgb(247, 154, 16);
+  background: black;
+  opacity: 0.9;
 }
 
 /* Cada titulo (h2) dentro de cada box*/
@@ -211,7 +202,7 @@ footer {
 .left .content .social a span {
   height: 40px;
   width: 40px;
-  background: #2c3e50;
+  background: blue;
   line-height: 40px;
   text-align: center;
   font-size: 18px;
@@ -225,7 +216,7 @@ footer {
 
 .center .content .fas {
   font-size: 1.4375rem;
-  background: #1a1a1a;
+  background: blue;
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -237,7 +228,7 @@ footer {
 
 /*hover sobre los botones de informacion, no de redes sociales*/
 .center .content .fas:hover {
-  background: #2c3e50;
+  background: black;
 }
 
 .center .content .text {
@@ -290,44 +281,6 @@ textarea {
 .right form .btn {
   margin-top: 10px;
 }
-
-/*Color del buton de envio de formulario*/
-.right form .btn button {
-  height: 40px;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: #2c3e50;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: .3s;
-}
-
-/*hover del boton de envio de formulario*/
-.right form .btn button:hover {
-  background: #000;
-}
-
-.bottom center {
-  padding: 5px;
-  font-size: 0.9375rem;
-  background: #151515;
-}
-
-.bottom center span {
-  color: #656565;
-}
-
-.bottom center a {
-  color: black;
-  text-decoration: none;
-}
-
-.bottom center a:hover {
-  text-decoration: underline;
-}
-
 
 
 /*Cambios en la pagina al cambiar el tamaño de pantalla*/

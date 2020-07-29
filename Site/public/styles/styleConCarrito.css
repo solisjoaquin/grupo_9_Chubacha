@@ -27,7 +27,7 @@
 }
 
 nav {
-  background-image: url(superNova5.jpg);
+  background-color: orangered;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -345,7 +345,7 @@ textarea {
 
   #check:checked ~ ul {
     left: 0;
-    background-image: url(superNova6.jpg);
+    background-image: url(../images/superNova6.jpg);
   }
 
   /*elementos responsive del footer*/
@@ -393,7 +393,7 @@ button {
   width: 100%;
   margin: 0 auto;
   position: static;
-  background-image: url(superNova7.jpg);
+  background-image: url(../images/superNova7.jpg);
   background-size: cover;
 }
 
@@ -560,7 +560,7 @@ td {
 }
 
 td.teclado {
-  background-image: url(tecladoStarWars.jpg);
+  background-image: url(../images/tecladoStarWars.jpg);
   background-size: cover;
 }
 

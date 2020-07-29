@@ -104,6 +104,11 @@ a:hover
   height: 100%;
 }
 
+body {
+  background-image: url(../images/superNova7.jpg);
+  background-size: cover;
+}
+
 .primera-division-imagenes {
   display: flex;
   max-width: 1000px;  

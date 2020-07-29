@@ -1,0 +1,656 @@
+/* Importar fuente Poppins desde Google fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+/*Elementos del header*/
+
+.imgsec {
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+/* icono carrito*/
+.fa-shopping-cart {
+  color: red;
+}
+
+nav {
+  background-image: url(superNova5.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border: 2px solid yellow;
+}
+
+/*Logo del sitio, en este caso viene siendo solo el nombre hecho con texto */
+label.logo {
+  color: #f2f2f2;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 20px;
+  font-weight: 600;
+}
+
+/* El unurder list dentro del nav */
+nav ul {
+  float: right;
+  margin-right: 60px;
+}
+
+/*Cada elemento de la lista del ul dentro del nav */
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+}
+
+/*Cada link dentro en cada li, para modificar el texto */
+
+nav ul li a {
+  color: #f2f2f2;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+/*El boton de register tiene un color distinto para sobresalir*/
+a.register {
+  background: rgba(213, 0, 14, 0.6);
+}
+
+/* Como se ve el link que esta activo y el hover*/
+a.active,
+a:hover {
+  background: black;
+  transition: 0.5s;
+  color: white;
+}
+
+/* Detalles del menu hamburguesa*/
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/*El menu hamburguesa esta hecho con un checkbox, pero el check esta oculto */
+#check {
+  display: none;
+}
+
+/* Este el container del medio, no es ni del footer ni del header, no afecta esos elementos*/
+.content1 {
+  position: relative;
+  margin: 110px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.content1 .text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: orangered;
+}
+
+.content1 .p {
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #202020;
+}
+
+/*Elementos del footer */
+
+footer {
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+
+/*Crea un elemnto div dentro del footer para convertirlo en flex*/
+.main-content {
+  display: flex;
+}
+
+/*Cada elemento del footer lo define como un box, hay 3 boxes, izq, centro y derecha*/
+
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+  background: black;
+}
+
+/* Cada titulo (h2) dentro de cada box*/
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #a8a8a8;
+}
+
+/*Linea corta sobre la linea mas fina*/
+.box .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: white;
+  top: -10px;
+}
+
+.left .content p {
+  text-align: justify;
+  color: white;
+}
+
+/*Estos elementos son para las redes sociales*/
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+  padding: 0 2px;
+}
+
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: orangered;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.left .content .social a span:hover {
+  background: black;
+}
+
+.center .content .fas {
+  font-size: 1.4375rem;
+  background: orangered;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/*hover sobre los botones de informacion, no de redes sociales*/
+.center .content .fas:hover {
+  background: blue;
+}
+
+.center .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.center .content .phone {
+  margin: 15px 0;
+}
+
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+
+.right form .msg {
+  margin-top: 10px;
+  color: black;
+  border: none;
+}
+
+.right form input,
+.right form .msgForm {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: white;
+  padding-left: 10px;
+  border: none;
+  color: #000;
+}
+
+.right form input:focus,
+.right form .msgForm:focus {
+  outline-color: #3498db;
+  color: black;
+}
+
+textarea {
+  color: black;
+  border: none;
+}
+
+.right form input {
+  height: 35px;
+}
+
+.right form .btn {
+  margin-top: 10px;
+}
+
+/*Color del buton de envio de formulario*/
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #2c3e50;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*hover del boton de envio de formulario*/
+.right form .btn button:hover {
+  background: #000;
+}
+
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+
+.bottom center span {
+  color: #656565;
+}
+
+.bottom center a {
+  color: black;
+  text-decoration: none;
+}
+
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+/*Cambios en la pagina al cambiar el tamaño de pantalla*/
+@media screen and (max-width: 1000px) {
+  /*Elementos responsive del header */
+  label.logo {
+    font-size: 27px;
+    padding-left: 25px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .checkbtn {
+    display: block;
+    margin-right: 40px;
+  }
+
+  ul {
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    position: absolute;
+
+    z-index: 10;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+    background-image: url(superNova6.jpg);
+  }
+
+  /*elementos responsive del footer*/
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: white;
+  }
+
+  .main-content .box {
+    margin: 5px 0;
+  }
+}
+
+/*palabra Login*/
+.palabraLogin {
+  padding-bottom: 51px;
+}
+
+/*margenes de los inputs*/
+.div-del-input {
+  margin-bottom: 16px;
+}
+
+/*padding del remember me*/
+.p-b-24 {
+  padding-bottom: 24px;
+}
+
+/*login*/
+
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+/*container principal, contiene al del formulario*/
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+  position: static;
+  background-image: url(superNova7.jpg);
+  background-size: cover;
+}
+
+/*container del formulario
+ocupa toda la pantalla*/
+.container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* container del formulario, ocupa solo la columna 
+del formulario------------------*/
+.wrap-login100 {
+  width: 390px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.login100-form {
+  width: 100%;
+}
+
+/*titulo del formulario*/
+.login100-form-title {
+  font-family: "Poppins";
+  font-size: 30px;
+  color: orangered;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+
+  width: 100%;
+  display: block;
+}
+
+/* input del formulario------------------*/
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  background-color: #e6e6e6;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+/* texto del input (color, fuente, tamaño)------------------ */
+
+.input100 {
+  font-family: "Poppins";
+  color: black;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 62px;
+  padding: 0 20px 0 38px;
+}
+
+/*-------------------------*/
+
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  pointer-events: none;
+  border: 1px solid orangered;
+  border-radius: 3px;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* ----[ Button ]*/
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login100-form-btn {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 62px;
+  background-color: black;
+  border-radius: 3px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+/*hover de los botones*/
+.login100-form-btn:hover {
+  background-color: orangered;
+  color: white;
+}
+
+/*div del Boton de google*/
+.google-div {
+  padding-top: 10px;
+}
+
+/*boton de google*/
+.google-btn {
+  background: white;
+  color: black;
+  border: 1px solid;
+}
+
+/*icon de google dentro del boton*/
+div button span {
+  padding-right: 7px;
+  color: black;
+}
+
+/*informacion de la tabla de productos*/
+
+table {
+  width: 80%;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color: orangered;
+}
+
+td.teclado {
+  background-image: url(tecladoStarWars.jpg);
+  background-size: cover;
+}
+
+input[type="text"],
+select {
+  color: black;
+}
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+  border: 1px solid yellow;
+}
+
+.botones_de_compra {
+  color: #000;
+  padding: 25px;
+  border: 2px solid;
+  background-color: yellow;
+}
+/*fin de la tabla de productos*/
+
+/*div del descuento y cupon*/
+
+.descuento {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px;
+  color: #000;
+  width: 25%;
+}
+
+/*negrita del titulo*/
+.descuento label,
+.descuento p strong {
+  color: #000;
+}
+
+input[type="text"],
+select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+input[type="submit"] {
+  background-color: orangered;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+}
+
+.botones_de_compra h1 {
+  color: #000;
+}
+
+/*cuando se hace tamaño mobile la caja del cupon
+y del envio se ponen en columna*/
+
+@media screen and (max-width: 766px) {
+  .descuento {
+    width: 80%;
+  }
+}
+
+/* COSAS A REVISAR: 
+1. tabla de detalle se rompe bajando width: 433px
+2. Falta colocar Imágenes de productos. 
+(Probé dándole un clase a teclado para agregarle una imagen de fondo al prdocuto.)
+3. Falta agregar botón para aumentar cantidad.
+ */

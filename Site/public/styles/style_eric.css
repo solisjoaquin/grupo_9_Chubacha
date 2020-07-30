@@ -28,6 +28,12 @@ nav {
   width: 100%;
 }
 
+/* icono carrito*/
+.fa-shopping-cart {
+  color:white;
+}
+
+
 /*Logo del sitio, en este caso viene siendo solo el nombre hecho con texto */
 label.logo {
   color: #f2f2f2;

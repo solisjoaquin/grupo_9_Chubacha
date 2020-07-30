@@ -119,20 +119,25 @@ body {
   display: flex;
   max-width: 1000px;  
   flex-wrap: wrap;
-  margin: 100px;
+  margin: 50px;
 
 }
 
 .imgmain {
   width: auto;
   height: auto;
-  border-style:outset;
+  border-style: outset;
+  border-color: yellow;
   text-align: center;
+  margin: 15px;
+  padding: 5px;
 }
 
+
 .buttondetails {
-  border-color: yellow;
-  background-color: blue;
+  background-color:orangered;
+  padding: 6px;
+  border-radius: 10px;
 }
 
 

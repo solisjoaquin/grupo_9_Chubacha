@@ -135,9 +135,10 @@ body {
 
 
 .buttondetails {
-  background-color:orangered;
+  background-color:black;
   padding: 6px;
   border-radius: 10px;
+  
 }
 
 
@@ -218,7 +219,7 @@ footer {
 .left .content .social a span {
   height: 40px;
   width: 40px;
-  background: blue;
+  background:orangered;
   line-height: 40px;
   text-align: center;
   font-size: 18px;
@@ -232,7 +233,7 @@ footer {
 
 .center .content .fas {
   font-size: 1.4375rem;
-  background: blue;
+  background:orangered;
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -348,13 +349,14 @@ textarea {
   a:hover,
   a.active {
     background: none;
-    color: #0082e6;
+    color: orangered;
 
   }
 
 
   #check:checked~ul {
     left: 0;
+    background-image: url(../images/superNova6.jpg);
   }
 
   /*elementos responsive del footer*/

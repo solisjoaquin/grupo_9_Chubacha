@@ -28,6 +28,12 @@ nav {
   width: 100%;
 }
 
+/* icono carrito*/
+.fa-shopping-cart {
+  color:white;
+}
+
+
 /*Logo del sitio, en este caso viene siendo solo el nombre hecho con texto */
 label.logo {
   color: #f2f2f2;
@@ -113,20 +119,26 @@ body {
   display: flex;
   max-width: 1000px;  
   flex-wrap: wrap;
-  margin: 100px;
+  margin: 50px;
 
 }
 
 .imgmain {
   width: auto;
   height: auto;
-  border-style:outset;
+  border-style: outset;
+  border-color: yellow;
   text-align: center;
+  margin: 15px;
+  padding: 5px;
 }
 
+
 .buttondetails {
-  border-color: yellow;
-  background-color: blue;
+  background-color:black;
+  padding: 6px;
+  border-radius: 10px;
+  
 }
 
 
@@ -162,7 +174,7 @@ footer {
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
-  color:black;
+  color:white;
 }
 
 .box .content {
@@ -207,7 +219,7 @@ footer {
 .left .content .social a span {
   height: 40px;
   width: 40px;
-  background: blue;
+  background:orangered;
   line-height: 40px;
   text-align: center;
   font-size: 18px;
@@ -221,7 +233,7 @@ footer {
 
 .center .content .fas {
   font-size: 1.4375rem;
-  background: blue;
+  background:orangered;
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -337,13 +349,14 @@ textarea {
   a:hover,
   a.active {
     background: none;
-    color: #0082e6;
+    color: orangered;
 
   }
 
 
   #check:checked~ul {
     left: 0;
+    background-image: url(../images/superNova6.jpg);
   }
 
   /*elementos responsive del footer*/

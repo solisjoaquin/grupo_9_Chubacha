@@ -19,6 +19,7 @@
 .imgheader {
   max-width: 100%;
   max-height: max-content;
+  border-style: outset;
 }
 
 nav {
@@ -26,6 +27,7 @@ nav {
   opacity: 0.9;
   height: 80px;
   width: 100%;
+  border-style: outset;
 }
 
 /* icono carrito*/
@@ -113,6 +115,7 @@ a:hover
 body {
   background-image: url(../images/superNova7.jpg);
   background-size: cover;
+  border-style: outset;
 }
 
 .primera-division-imagenes {
@@ -151,6 +154,7 @@ footer {
   bottom: 0px;
   width: 100%;
   background:black;
+  border-style: outset;
 }
 
 /*Crea un elemnto div dentro del footer para convertirlo en flex*/
@@ -363,6 +367,7 @@ textarea {
   footer {
     position: relative;
     bottom: 0px;
+    
   }
 
   .main-content {

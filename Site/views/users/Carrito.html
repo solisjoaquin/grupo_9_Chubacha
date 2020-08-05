@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chubacha</title>
+    <link rel="stylesheet" href="../styles/styleConCarrito.css">
+    <!---->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+    <!-- header -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Chubacha</label>
+        <ul>
+            <li><a class="" href="index.html">Home</a></li>
+
+            <li><a class="active" href="login.html">Iniciar sesion</a></li>
+            <li><a class="register" href="register.html">Registrarse</a></li>
+            <li> <a href="carrito.html" style="font-size:24px"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+    <!--fin del header-------------------------------------->
+
+
+    <!-- Carrito-------------------------------------------->
+
+    <img class="imgheader" src="../images/prueba2.jpg" alt=""><br>
+
+    <div class="limiter">
+
+        <div class="container-login100">
+
+            <table id="t01">
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td class="teclado">Teclado</td>
+                    <td>$360.00</td>
+                    <td><input placeholder="0" type="text" size="3"></td>
+                    <td>$720.00</td>
+                </tr>
+                <tr>
+                    <td class="mouse">Mouse</td>
+                    <td>$360.00</td>
+                    <td><input placeholder="0" type="text" size="3"></td>
+                    <td>$720.00</td>
+                </tr>
+                <tr>
+                    <td class="auriculares">Auriculares</td>
+                    <td>$360.00</td>
+                    <td><input placeholder="0" type="text" size="3"></td>
+                    <td>$720.00</td>
+                </tr>
+            </table>
+
+            <div class="descuento">
+                <form>
+
+
+                    <p><strong>Precio de envio</strong></p> <br>
+                    <label for="country">Provincia</label><br>
+                    <select id="country" name="country">
+                        <option value="australia">Buenos Aires</option>
+                        <option value="canada">Cordoba</option>
+                        <option value="usa">Santa Fe</option>
+                    </select><br>
+
+
+                    <label for="fname">Codigo postal</label><br>
+                    <input type="text" id="fname" name="firstname" placeholder="XXXX" size="5"><br>
+
+                    <input type="submit" value="Calcular envio">
+                </form>
+            </div>
+
+            <div class="descuento">
+                <form>
+
+
+                    <p><strong>¿Tenes un cupón?</strong></p> <br>
+
+                    <label for="fname">Ingresa el numero del cupón</label><br>
+                    <input type="text" id="fname" name="firstname" placeholder="XXXXXXXX" size="5"><br>
+
+                    <input type="submit" value="Aplicar cupón">
+                </form>
+            </div>
+
+            <div class="botones_de_compra">
+                <h1>Total: $5000.00</h1>
+                <button class="botones_de_compra">Seguir comprando</button>
+                <button class="botones_de_compra">Pagar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!--fin del carrito------------------------>
+
+
+
+    <!-- comienzo del footer ------------------>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>
+                    Sobre nosotros</h2>
+                <div class="content">
+                    <p>
+                        Chubacha ofrece los mejores productos de tecnologia con la tematica de Star Wars.</p>
+                    <div class="social">
+                        <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
+                        <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>
+                    Donde estamos</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Digital House</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+54-333-3333</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">contacto@chubacha.com</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!--fin del footer--------------------------->
+
+
+</body>
+
+</html>

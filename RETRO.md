@@ -2,6 +2,8 @@
 
 ==========================================
 
+#Sprint 1
+
 ### **Hacer más:**
 
 - Ponernos fechas para mostrar lo realizado.
@@ -23,6 +25,36 @@
 
 - Juntarnos a codear en grupo.
 - Reuniones cada semana.
+- Actualizar el repositorio de github si llegamos a un acuerdo en la reunión.
+
+### **Dejar de hacer:**
+
+- Relajarse si nos sobra tiempo.
+
+
+
+#Sprint 2
+
+### **Hacer más:**
+
+- Dentro de la reunión tener un momento para seguir conociéndonos.
+- Interacturar en Trello.
+- Informar a mis compañeros cuando no se de algo.
+
+### **Hacer menos:**
+
+- .
+
+### **Seguir haciendo:**
+
+- Estar conectados por Slack.
+- Ponernos fechas para mostrar lo realizado.
+- Juntarnos a codear en grupo.
+- Reuniones cada semana.
+
+### **Empezar a hacer:**
+
+- Llevar registro de las reuniones. (en Trello)
 - Actualizar el repositorio de github si llegamos a un acuerdo en la reunión.
 
 ### **Dejar de hacer:**

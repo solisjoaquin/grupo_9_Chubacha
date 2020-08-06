@@ -658,3 +658,22 @@ y del envio se ponen en columna*/
   }
 
 }
+
+/*estilos del archivo crearProducto*/
+
+.product_div {
+  margin: 10px;
+}
+.product_div p {
+  padding: 10px;
+  color: #000;
+}
+
+.button_carrito {
+  margin: 10px;
+  display: flex;
+}
+
+.button_carrito input, .button_carrito button {
+  margin: 25px;
+}

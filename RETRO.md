@@ -43,7 +43,7 @@
 
 ### **Hacer menos:**
 
-- .
+- Dejar pasar mucho tiempo sin contacto.
 
 ### **Seguir haciendo:**
 

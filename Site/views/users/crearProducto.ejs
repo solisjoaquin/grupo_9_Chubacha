@@ -4,21 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>Chubacha</title>
-    <link rel="stylesheet" type="text/css" href="../styles/style_joaco.css">
+    <link rel="stylesheet" href="../styles/style_joaco.css">
     <!---->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-
-    <script src="https://apis.google.com/js/api:client.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
-
 </head>
+
 
 <body>
     <!-- header -->
@@ -30,72 +25,103 @@
         <label class="logo">Chubacha</label>
         <ul>
             <li><a class="" href="index.html">Home</a></li>
-            <li><a href="login.html">Iniciar sesion</a></li>
+
+            <li><a class="active" href="login.html">Iniciar sesion</a></li>
             <li><a class="register" href="register.html">Registrarse</a></li>
             <li> <a href="carrito.html" style="font-size:24px"><i class="fa fa-shopping-cart"></i></a></li>
 
         </ul>
     </nav>
 
-<!--Register-->
+
+
+    <!-- Login-->
     <div class="limiter">
         <div class="container-login100">
-            <div class="wrap-login100 p-t-50 p-b-90">
+            <div class="product_div">
+                <p>Nombre del producto</p>
+                <input class="input100" type="text"  name="pass" >
+                <span class="focus-input100"></span>
+
+                <p>Descripcion</p>
+                <input class="input100" type="text"  name="pass" >
+                <span class="focus-input100"></span>
+
+                <p>Precio</p>
+                <input class="input100" type="text"  name="pass" placeholder="0000.00">
+                <span class="focus-input100"></span>
+
+                <p>Categoria</p>
+                <select name="productos" id="productos">
+                    <option value="volvo">Teclados</option>
+                    <option value="saab">Mouse</option>
+                    <option value="mercedes">Auriculares</option>
+                    <option value="audi">Monitores</option>
+                  </select>
+            </div>
+            <div>
+                <input  class="input100" type="file" id="img" name="img" accept="image/*">
+
+                        <span class="focus-input100"></span>
+
+
+                        <div class="button_carrito">
+                            
+                            <button class="login100-form-btn">
+                                Borrar
+                            </button>
+                            <input type="submit" value="publicar" class="login100-form-btn">
+
+                        
+                        </div>
+            </div>
+            
+
+
+
+            <!-- <div class="wrap-login100 p-t-50 p-b-90">
                 <form class="login100-form validate-form flex-sb flex-w">
-                    <!--Titulo de registrarse-->
                     <span class="login100-form-title palabraLogin">
-                        Registrarse
-                    </span>
+                        Login
+                    </span> -->
 
-                    <!--Input del nombre completo-->
-                    <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
-                        <input class="input100" type="text" name="username" required placeholder="Nombre Completo">
+                    <!--Input para el correo-->
+                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
+                        <input class="input100" type="text" required name="username" placeholder="Correo electronico">
                         <span class="focus-input100"></span>
-                    </div>
+                    </div> -->
 
-                    <!--Input del correo-->
-                    <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
-                        <input class="input100" type="text" name="username" required placeholder="Correo electronico">
+                    <!-- input para la contraseña-->
+                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" type="password" required name="pass" placeholder="Contraseña">
                         <span class="focus-input100"></span>
-                    </div>
+                    </div> -->
 
-                    <!--Input de la contraseña -->
-                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" required placeholder="Contraseña">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <!--Input de la confirmacion de contraseña-->
-                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" required placeholder="Confirmar contraseña">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <!--Boton de registrase -->
-                    <div class="container-login100-form-btn m-t-17">
+                    <!--boton de Login-->
+                    <!-- <div class="container-login100-form-btn m-t-17">
                         <button class="login100-form-btn">
-                            Registrarse
+                            Login
                         </button>
-                    </div>
+                    </div> -->
 
-                    <!--Boton de registrarse con Google -->
-                    <div class="container-login100-form-btn m-t-17 google-div">
-
+                    <!--boton de login con google-->
+                    <!-- <div class="container-login100-form-btn m-t-17 google-div">
                         <button class="login100-form-btn google-btn">
-                            <span class="fab fa-google"></span> Registrarse con Google
-                        </button>
-                    </div>
+                            <span class="fab fa-google"></span> Ingresar con Google
+                        </button> -->
+<!--                     </div>
 
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
 
 
 
+
     <!-- footer -->
     <footer>
-        <div class="main-content about">
+        <div class="main-content">
             <div class="left box">
                 <h2>
                     Sobre nosotros</h2>

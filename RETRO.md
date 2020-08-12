@@ -61,6 +61,30 @@
 
 - Relajarse si nos sobra tiempo.
 
+
+
+# Sprint 3
+
+### **Hacer más:**
+
+- ...
+
+### **Hacer menos:**
+
+- ....
+
+### **Seguir haciendo:**
+
+- ...
+
+### **Empezar a hacer:**
+
+- ...
+
+### **Dejar de hacer:**
+
+- ...
+
 #### _Backstage_
 
 | Estrellita                                            |

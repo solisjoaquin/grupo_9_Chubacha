@@ -1,0 +1,65 @@
+<!--vista de login de usuario-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('partials/head.ejs') %>
+    <style>
+        .sin-cuenta {
+            padding: 10px;
+            color: black;
+        }
+        .sin-cuenta a {
+            padding-left: 5px;
+            color: orangered;
+        }
+    </style>
+</head>
+  <body>
+    <%- include('partials/header.ejs') %>
+
+    
+
+        <!-- Login-->
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-50 p-b-90">
+                <form class="login100-form validate-form flex-sb flex-w">
+                    <span class="login100-form-title palabraLogin">
+                        Login
+                    </span>
+
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100"  required name="email" placeholder="Correo electronico">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <!-- input para la contraseña-->
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" type="password" required name="password" placeholder="Contraseña">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <!--boton de Login-->
+                    <div class="container-login100-form-btn m-t-17">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+
+                    <!--boton de login con google-->
+                    <div class="container-login100-form-btn m-t-17 google-div">
+                        <button class="login100-form-btn google-btn">
+                            <span class="fab fa-google"></span> Ingresar con Google
+                        </button>
+                    </div>
+                    <div>
+                        <p class="sin-cuenta">¿No tenes cuenta todavia?<a href="/users/register">Registrate</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

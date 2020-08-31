@@ -1,0 +1,86 @@
+<!--vista de un solo producto-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('partials/head.ejs') %>
+
+  <style>
+    .producto-container {
+      margin: 25px;
+    }
+
+    .producto-desc {
+      margin: 25px;
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    div p,
+    div h3,
+    div h2 {
+      color: black;
+    }
+
+    .button1 {
+      background-color: red;
+    }
+
+    /* Green */
+    .button2 {
+      background-color: #008CBA;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('partials/header.ejs') %>
+
+
+  <div class="producto-container">
+
+    <div class="producto-desc">
+
+      <img src="/images/auri2.JPG" alt="Avatar" length="250px" width="250px">
+      
+      <h2>Producto <%= productoAEditar.id %></h2>
+      <h2><%= productoAEditar.nombre %></h2>
+      <h3>Descripcion</h3>
+      <p><%= productoAEditar.descripcion %>.</p>
+      <h3>Categoria</h3>
+      <p><%= productoAEditar.tipoProductos %> </p>
+      <h3>Precio</h3>
+      <p>$<%= productoAEditar.precio %></p>
+
+    </div>
+    <div>
+      <a href="/productos/<%= productoAEditar.id %>/editar">
+        <button class="button button2" type="button">
+          Editar
+        </button></a>
+
+      <form method="POST" action="/productos/<%= idProducto %>?_method=DELETE">
+        <button class="button button1" type="submit">
+          <a>Eliminar</a>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

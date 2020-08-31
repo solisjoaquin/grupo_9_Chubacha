@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/header.ejs') %>
+    
+    <!-- Carrito-------------------------------------------->
+
+
+    <div class="limiter">
+
+        <div class="container-login100">
+
+            <table id="t01">
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+                <!--Solo mostrara el listado del carrito pero con paso de a 2-->
+                <% for ( let i = 0; i < productos.length; i= i+2 ){ %>
+                <tr>
+                    <td class="teclado"><%= productos[i].nombre %></td>
+                    <td>$<%= productos[i].precio%></td>
+                    <td><input placeholder="0" type="text" size="3"></td>
+                    <td>$720.00</td>
+                </tr>
+
+                <% } %>
+
+            </table>
+
+            <div class="descuento">
+                <form>
+
+
+                    <p><strong>Precio de envio</strong></p> <br>
+                    <label for="country">Provincia</label><br>
+                    <select id="country" name="country">
+                        <option value="australia">Buenos Aires</option>
+                        <option value="canada">Cordoba</option>
+                        <option value="usa">Santa Fe</option>
+                    </select><br>
+
+
+                    <label for="fname">Codigo postal</label><br>
+                    <input type="text" id="fname" name="firstname" placeholder="XXXX" size="5"><br>
+
+                    <input type="submit" value="Calcular envio">
+                </form>
+            </div>
+
+            <div class="descuento">
+                <form>
+
+
+                    <p><strong>¿Tenes un cupón?</strong></p> <br>
+
+                    <label for="fname">Ingresa el numero del cupón</label><br>
+                    <input type="text" id="fname" name="firstname" placeholder="XXXXXXXX" size="5"><br>
+
+                    <input type="submit" value="Aplicar cupón">
+                </form>
+            </div>
+
+            <div class="botones_de_compra">
+                <h1>Total: $5000.00</h1>
+                <a><button class="botones_de_compra"><a href="">Seguir comprando</a></button></a>
+                <button class="botones_de_compra"><a href="">Pagar</a></button>
+
+            </div>
+        </div>
+    </div>
+
+    <!--fin del carrito------------------------>
+
+
+
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!--formulario para registrar un usuario-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('partials/head.ejs') %>
+</head>
+  <body>
+    <%- include('partials/header.ejs') %>
+
+    <!--Register-->
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-50 p-b-90">
+
+
+
+                <form class="login100-form validate-form flex-sb flex-w" action="/users/register" method="POST">
+                    <!--Titulo de registrarse-->
+                    <span class="login100-form-title palabraLogin">
+                        Registrarse
+                    </span>
+
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" required name="name" placeholder="Nombre" type="text">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" required name="name" placeholder="Apellido" type="text">
+                        <span class="focus-input100"></span>
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input type="email" class="input100"  required name="email" placeholder="Correo electronico">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <!--Input de la contraseña -->
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input type="password" class="input100" type="password" name="password" required placeholder="Contraseña">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <!--Input de la confirmacion de contraseña-->
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input type="password" class="input100" type="password" name="password" required placeholder="Confirmar contraseña">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <!--Boton de registrase -->
+                    <div class="container-login100-form-btn m-t-17">
+                        <input type="submit" value="registrarse" class="login100-form-btn">
+                    </input>
+                    </div>
+
+                    <!--Boton de registrarse con Google -->
+                    <div class="container-login100-form-btn m-t-17 google-div">
+
+                        <button class="login100-form-btn google-btn">
+                            <span class="fab fa-google"></span> Registrarse con Google
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

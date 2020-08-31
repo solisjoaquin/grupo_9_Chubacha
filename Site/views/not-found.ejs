@@ -1,0 +1,36 @@
+<!--vista de error 404-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+    <style>
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .titulo-404 {
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="container">
+        <img src="/images/404.jpg" alt="404-error" style="width: 100%">
+        <h1 class="titulo-404">Pagina no encontrada - 404</h1>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

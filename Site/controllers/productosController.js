@@ -1,114 +1,111 @@
-let fs = require("fs");
-let path = require('path');
+const fs = require('fs')
+const path = require('path')
 
+const productosController = {
+  // estoy mandando los archivos ejs con render
+  // puedo llamarlos con o sin ".ejs"
 
-let productosController = {
-    // estoy mandando los archivos ejs con render
-    // puedo llamarlos con o sin ".ejs"
+  index: (req, res) => {
+    const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' })
+    const productos = JSON.parse(productosJSON)
+    res.render('productos', { productos: productos })
+  },
+  detailproduct: (req, res) => {
+    let idProducto = req.params.id
+    idProducto = idProducto - 1
 
-    index:(req,res)=>{
-        let productosJSON = fs.readFileSync('productos.json', {encoding:'utf-8'})
-        let productos = JSON.parse(productosJSON)
-        res.render("productos", {productos:productos})
-    },
-    detailproduct: (req,res)=>{
-        let idProducto = req.params.id
-        idProducto = idProducto-1;
+    const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' })
+    const productos = JSON.parse(productosJSON)
+    const productoAEditar = productos[idProducto]
 
-        let productosJSON = fs.readFileSync('productos.json', {encoding:'utf-8'})
-        let productos = JSON.parse(productosJSON)
-        let productoAEditar = productos[idProducto]
+    res.render('producto', { productoAEditar: productoAEditar, idProducto: idProducto })
+    // res.send(idProducto)
+  },
+  carrito: (req, res) => {
+    const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' })
+    const productos = JSON.parse(productosJSON)
+    res.render('carrito', { productos: productos })
+  },
+  edit: (req, res) => {
+    const idProducto = req.params.id
 
+    const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' })
+    const productos = JSON.parse(productosJSON)
+    const productoAEditar = productos[idProducto - 1]
 
-         res.render("producto" , {productoAEditar: productoAEditar, idProducto:idProducto})
-        //res.send(idProducto)
-    },
-    carrito:(req,res)=>{
-        let productosJSON = fs.readFileSync('productos.json', {encoding:'utf-8'})
-        let productos = JSON.parse(productosJSON)
-        res.render("carrito", {productos:productos})
-    },
-    edit:(req,res)=>{
-        let idProducto = req.params.id;
-        
-        let productosJSON = fs.readFileSync('productos.json', {encoding:'utf-8'})
-        let productos = JSON.parse(productosJSON)
-        let productoAEditar = productos[idProducto-1]
+    res.render('editarproducto', { productoAEditar: productoAEditar, idProducto: idProducto })
+    // res.send(idProducto)
+  },
 
-        res.render("editarproducto", {productoAEditar:productoAEditar, idProducto:idProducto})
-        //res.send(idProducto)
-    },
+  // traer vista de creacion de producto por get
+  create: (req, res) => {
+    res.render('crearproducto')
+  },
 
-    // traer vista de creacion de producto por get
-    create:(req,res)=>{
-        res.render('crearproducto')
-    },
+  // crear producto por POST
+  store: (req, res, next) => {
+    const producto = {
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      precio: req.body.precio,
+      tipoProductos: req.body.tipoProductos,
+      imagen: req.files[0].filename
+    }
+    const archivoProductos = fs.readFileSync('productos.json', { encoding: 'utf-8' })
+    let productos
+    if (archivoProductos == '') {
+      productos = []
+    } else {
+      productos = JSON.parse(archivoProductos)
+    };
+    productos.push(producto)
 
-    // crear producto por POST
-    store:(req,res, next)=>{
+    const productosJSON = JSON.stringify(productos)
+    fs.writeFileSync('productos.json', productosJSON)
 
-        let producto = {
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            tipoProductos: req.body.tipoProductos,
-            imagen: req.files[0].filename
-        } 
-        let archivoProductos = fs.readFileSync('productos.json', {encoding: 'utf-8'});
-        let productos;
-        if (archivoProductos == ""){
-            productos = [];
-        } else {
-            productos = JSON.parse(archivoProductos);
-        };
-        productos.push(producto)
+    // res.render('producto',{producto: producto})
+    res.redirect('/')
+  },
 
-        let productosJSON = JSON.stringify(productos);
-        fs.writeFileSync('productos.json', productosJSON)
+  // editar producto por PUT
+  update: (req, res) => {
+    const idProducto = req.params.id
 
-        //res.render('producto',{producto: producto})
-        res.redirect('/')
-    },
-
-    // editar producto por PUT
-    update:(req,res)=>{
-        let idProducto = req.params.id;
-
-/*         let producto = {
+    /*         let producto = {
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
             tipoProductos: req.body.tipoProductos
         } */
 
-        // leer el archivo JSON y parsearlo a objeto literal
-        let archivoProductos = fs.readFileSync('./data/productos.json', {encoding: 'utf-8'});
-        productos = JSON.parse(archivoProductos);
+    // leer el archivo JSON y parsearlo a objeto literal
+    const archivoProductos = fs.readFileSync('./data/productos.json', { encoding: 'utf-8' })
+    productos = JSON.parse(archivoProductos)
 
-        //reemplazo con los nuevos elementos
-        for (let i=0; i<productos.length; i++){
-            if (productos[i].id == (idProducto)){
-                productos[i].nombre = req.body.nombre,
-                productos[i].descripcion = req.body.descripcion,
-                productos[i].precio = req.body.precio,
-                productos[i].tipoProductos = req.body.tipoProductos
-            }
-        }
-
-        let productosJSON = JSON.stringify(productos);
-        fs.writeFileSync('productos.json', productosJSON)
-
-        //res.render('producto',{producto: producto})
-        res.redirect('/')
-        //res.send(req.body)
-        /* let putVar = req.body
-        res.send(putVar) */
-    },
-
-    // eliminar prouducto por DELETE
-    delete:(req,res)=>{
-        res.send("producto eliminado")
+    // reemplazo con los nuevos elementos
+    for (let i = 0; i < productos.length; i++) {
+      if (productos[i].id == (idProducto)) {
+        productos[i].nombre = req.body.nombre,
+        productos[i].descripcion = req.body.descripcion,
+        productos[i].precio = req.body.precio,
+        productos[i].tipoProductos = req.body.tipoProductos
+      }
     }
-};
 
-module.exports = productosController;
+    const productosJSON = JSON.stringify(productos)
+    fs.writeFileSync('productos.json', productosJSON)
+
+    // res.render('producto',{producto: producto})
+    res.redirect('/')
+    // res.send(req.body)
+    /* let putVar = req.body
+        res.send(putVar) */
+  },
+
+  // eliminar prouducto por DELETE
+  delete: (req, res) => {
+    res.send('producto eliminado')
+  }
+}
+
+module.exports = productosController

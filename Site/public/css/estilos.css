@@ -1,0 +1,103 @@
+/* esto es una version mas ordenanda del style css pero no esta terminada,
+ninguna vista la esta usando*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+h1 {
+    color: red;
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+/*Elementos del header*/
+
+.imgsec {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
+  
+  nav {
+    background: orangered;
+    height: 80px;
+    width: 100%;
+  }
+  
+  /*Logo del sitio, en este caso viene siendo solo el nombre hecho con texto */
+  label.logo {
+    color: #f2f2f2;
+    font-size: 33px;
+    line-height: 80px;
+    padding: 20px;
+    font-weight: 600;
+  }
+  
+  
+  /* El unurder list dentro del nav */
+  nav ul {
+    float: right;
+    margin-right: 60px;
+    background: orangered;
+    
+  }
+  
+  
+  /*Cada elemento de la lista del ul dentro del nav */
+  
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 2px;
+  }
+  
+  /*Cada link dentro en cada li, para modificar el texto */
+  
+  nav ul li a {
+    color: #f2f2f2;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  
+  /*El boton de register tiene un color distinto para sobresalir*/
+  a.register {
+    background: rgba(213,0,14,0.6)
+  }
+  
+  
+  /* Como se ve el link que esta activo y el hover*/
+  a.active,
+  a:hover
+   {
+    background: black ;
+    transition: .5s;
+    color: white;
+  }
+
+  /* Detalles del menu hamburguesa*/
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /*El menu hamburguesa esta hecho con un checkbox, pero el check esta oculto */
+  #check {
+    display: none;
+  }
+  
+  
+  

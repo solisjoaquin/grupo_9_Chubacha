@@ -1,0 +1,29 @@
+[
+    {
+        "id" : 1,
+        "name" : "user",
+        "last-name" : "user",
+        "email" : "a@gmail.com",
+        "password" : "",
+        "category": 2,
+        "image": ""
+    },
+    {
+        "id" : 2,
+        "name" : "user2",
+        "last-name" : "user2",
+        "email" : "a2@gmail.com",
+        "password" : "",
+        "category": 1,
+        "image": ""
+    },
+    {
+        "id" : 3,
+        "name" : "user3",
+        "last-name" : "user3",
+        "email" : "a3@gmail.com",
+        "password" : "",
+        "category": 1,
+        "image": ""
+    }
+]

@@ -1,124 +1,135 @@
-/* Importar fuente Poppins desde Google fonts */
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+a {
+  color: #00B7FF;
+}
+ */
 
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+h1 {
+    color: red;
+}
 * {
   margin: 0;
   padding: 0;
   color: #d9d9d9;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   list-style: none;
   text-decoration: none;
+ /*  color: white; */
+}
+.logo-a, .footer-a {
   color: white;
 }
-
-/*Elementos del header*/
-
-.imgsec {
-  background: url(bg1.jpg) no-repeat;
-  background-size: cover;
-  height: calc(100vh - 80px);
-}
-
-/* icono carrito*/
-.fa-shopping-cart {
+.logo-a:hover, .footer-a:hover {
   color: white;
+  text-decoration: none;
+  
 }
 
-nav {
-  background-color: orangered;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  border: 2px solid yellow;
-}
-
-/*Logo del sitio, en este caso viene siendo solo el nombre hecho con texto */
-label.logo {
-  color: #f2f2f2;
-  font-size: 33px;
-  line-height: 80px;
-  padding: 20px;
-  font-weight: 600;
-}
-
-/* El unurder list dentro del nav */
-nav ul {
-  float: right;
-  margin-right: 60px;
-}
-
-/*Cada elemento de la lista del ul dentro del nav */
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 2px;
-}
-
-/*Cada link dentro en cada li, para modificar el texto */
-
-nav ul li a {
-  color: #f2f2f2;
-  font-weight: 500;
-  font-size: 20px;
-  padding: 7px 13px;
-  border-radius: 3px;
-}
-
-/*El boton de register tiene un color distinto para sobresalir*/
-a.register {
-  background: rgba(213, 0, 14, 0.6);
-}
-
-/* Como se ve el link que esta activo y el hover*/
-a.active,
-a:hover {
-  background: black;
-  transition: 0.5s;
-  color: white;
-}
-
-/* Detalles del menu hamburguesa*/
-.checkbtn {
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-/*El menu hamburguesa esta hecho con un checkbox, pero el check esta oculto */
-#check {
-  display: none;
-}
-
-/* Este el container del medio, no es ni del footer ni del header, no afecta esos elementos*/
-.content1 {
-  position: relative;
-  margin: 110px auto;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.content1 .text {
-  font-size: 2.5rem;
-  font-weight: 600;
+.h3-title-bootstrap {
   color: orangered;
 }
 
-.content1 .p {
-  font-size: 2.1875rem;
-  font-weight: 600;
-  color: #202020;
+.features-icon {
+  color: black;
+  padding-bottom: 10px;
 }
+/*Elementos del header*/
 
-/*Elementos del footer */
+.imgsec {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
+  
+  nav {
+    background: orangered;
+    height: 80px;
+    width: 100%;
+  }
+  
+  /*Logo del sitio, en este caso viene siendo solo el nombre hecho con texto */
+  label.logo {
+    color: #f2f2f2;
+    font-size: 33px;
+    line-height: 70px;
+    /* line-height: 80px; */
+    padding: 20px;
+    font-weight: 600;
+  }
+  
+  
+  /* El unurder list dentro del nav */
+  nav ul {
+    float: right;
+    margin-right: 60px;
+    background: orangered;
+    
+  }
+  
+  
+  /*Cada elemento de la lista del ul dentro del nav */
+  
+  nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 2px;
+  }
+  
+  /*Cada link dentro en cada li, para modificar el texto */
+  
+  nav ul li a {
+    
+    font-weight: 500;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: white;
+  }
+  
+  /*El boton de register tiene un color distinto para sobresalir*/
+  a.register {
+    background: rgba(213,0,14,0.6)
+  }
+  
+  
+  /* Como se ve el link que esta activo y el hover*/
+  a.active,
+  a:hover
+   {
+    background: black ;
+    transition: .5s;
+    color: white;
+  }
+
+  /* Detalles del menu hamburguesa*/
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /*El menu hamburguesa esta hecho con un checkbox, pero el check esta oculto */
+  #check {
+    display: none;
+  }
+  
+
+  /*Elementos del footer */
+
 
 footer {
+  
   bottom: 0px;
   width: 100%;
   background: #111;
@@ -152,17 +163,18 @@ footer {
 
 .box .content:before {
   position: absolute;
-  content: "";
+  content: '';
   top: -10px;
   height: 2px;
   width: 100%;
   background: #a8a8a8;
+
 }
 
 /*Linea corta sobre la linea mas fina*/
 .box .content:after {
   position: absolute;
-  content: "";
+  content: '';
   height: 2px;
   width: 15%;
   background: white;
@@ -212,7 +224,7 @@ footer {
 
 /*hover sobre los botones de informacion, no de redes sociales*/
 .center .content .fas:hover {
-  background: blue;
+  background: black;
 }
 
 .center .content .text {
@@ -276,7 +288,7 @@ textarea {
   font-size: 1.0625rem;
   font-weight: 500;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 /*hover del boton de envio de formulario*/
@@ -303,8 +315,12 @@ textarea {
   text-decoration: underline;
 }
 
+
+
 /*Cambios en la pagina al cambiar el tamaño de pantalla*/
 @media screen and (max-width: 1000px) {
+
+
   /*Elementos responsive del header */
   label.logo {
     font-size: 27px;
@@ -313,7 +329,9 @@ textarea {
 
   nav ul li a {
     font-size: 16px;
+
   }
+
 
   .checkbtn {
     display: block;
@@ -321,16 +339,18 @@ textarea {
   }
 
   ul {
+
     width: 100%;
     height: 100vh;
     background: #2c3e50;
     top: 80px;
     left: -100%;
     text-align: center;
-    transition: all 0.5s;
+    transition: all .5s;
     position: absolute;
 
     z-index: 10;
+
   }
 
   nav ul li {
@@ -343,9 +363,8 @@ textarea {
     font-size: 20px;
   }
 
-  #check:checked ~ ul {
+  #check:checked~ul {
     left: 0;
-    background-image: url(../images/superNova6.jpg);
   }
 
   /*elementos responsive del footer*/
@@ -362,45 +381,41 @@ textarea {
 
   .main-content .box {
     margin: 5px 0;
+
   }
+
 }
 
 /*palabra Login*/
-.palabraLogin {
-  padding-bottom: 51px;
-}
+.palabraLogin {padding-bottom: 51px;}
 
 /*margenes de los inputs*/
-.div-del-input {
-  margin-bottom: 16px;
-}
+.div-del-input {margin-bottom: 16px;}
 
 /*padding del remember me*/
-.p-b-24 {
-  padding-bottom: 24px;
-}
+.p-b-24 {padding-bottom: 24px;}
 
 /*login*/
 
 button {
-  outline: none !important;
-  border: none;
-  background: transparent;
+	outline: none !important;
+	border: none;
+	background: transparent;
 }
+
+
 
 /*container principal, contiene al del formulario*/
 .limiter {
   width: 100%;
   margin: 0 auto;
-  position: static;
-  background-image: url(../images/superNova7.jpg);
-  background-size: cover;
+  position: static ;
 }
 
 /*container del formulario
 ocupa toda la pantalla*/
 .container-login100 {
-  width: 100%;
+  width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -411,10 +426,11 @@ ocupa toda la pantalla*/
   justify-content: center;
   align-items: center;
   padding: 15px;
-
+  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
 
 /* container del formulario, ocupa solo la columna 
@@ -428,11 +444,12 @@ del formulario------------------*/
 
 .login100-form {
   width: 100%;
+  
 }
 
 /*titulo del formulario*/
 .login100-form-title {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-size: 30px;
   color: orangered;
   line-height: 1.2;
@@ -456,7 +473,7 @@ del formulario------------------*/
 /* texto del input (color, fuente, tamaño)------------------ */
 
 .input100 {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   color: black;
   line-height: 1.2;
   font-size: 18px;
@@ -467,6 +484,7 @@ del formulario------------------*/
   height: 62px;
   padding: 0 20px 0 38px;
 }
+
 
 /*-------------------------*/
 
@@ -485,6 +503,7 @@ del formulario------------------*/
   opacity: 0;
 }
 
+
 /* ----[ Button ]*/
 .container-login100-form-btn {
   width: 100%;
@@ -497,7 +516,7 @@ del formulario------------------*/
 }
 
 .login100-form-btn {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-size: 16px;
   color: #fff;
   line-height: 1.2;
@@ -549,27 +568,20 @@ div button span {
 /*informacion de la tabla de productos*/
 
 table {
-  width: 80%;
+  
+  width:80%;
+  
 }
-table,
-th,
-td {
+table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   color: orangered;
 }
 
-td.teclado {
-  background-image: url(../images/tecladoStarWars.jpg);
-  background-size: cover;
-}
-
-input[type="text"],
-select {
+input[type=text], select {
   color: black;
 }
-th,
-td {
+th, td {
   padding: 15px;
   text-align: left;
 }
@@ -577,21 +589,20 @@ td {
   background-color: #eee;
 }
 #t01 tr:nth-child(odd) {
-  background-color: #fff;
+ background-color: #fff;
 }
 #t01 th {
   background-color: black;
   color: white;
-  border: 1px solid yellow;
 }
 
 .botones_de_compra {
   color: #000;
   padding: 25px;
-  border: 2px solid;
-  background-color: yellow;
+  border: 1px solid;
 }
 /*fin de la tabla de productos*/
+
 
 /*div del descuento y cupon*/
 
@@ -605,15 +616,14 @@ td {
 }
 
 /*negrita del titulo*/
-.descuento label,
-.descuento p strong {
+.descuento label, .descuento p strong{
   color: #000;
 }
 
-input[type="text"],
-select {
+
+input[type=text], select {
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 0px 0; 
   display: inline-block;
   border: 1px solid black;
   border-radius: 4px;
@@ -621,7 +631,8 @@ select {
   color: #000;
 }
 
-input[type="submit"] {
+input[type=submit] {
+  
   background-color: orangered;
   color: white;
   padding: 14px 20px;
@@ -631,11 +642,11 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type=submit]:hover {
   background-color: black;
 }
 
-.botones_de_compra h1 {
+.botones_de_compra h1{
   color: #000;
 }
 
@@ -646,11 +657,24 @@ y del envio se ponen en columna*/
   .descuento {
     width: 80%;
   }
+
 }
 
-/* COSAS A REVISAR: 
-1. tabla de detalle se rompe bajando width: 433px
-2. Falta colocar Imágenes de productos. 
-(Probé dándole un clase a teclado para agregarle una imagen de fondo al prdocuto.)
-3. Falta agregar botón para aumentar cantidad.
- */
+/*estilos del archivo crearProducto*/
+
+.product_div {
+  margin: 10px;
+}
+.product_div p {
+  padding: 10px;
+  color: #000;
+}
+
+.button_carrito {
+  margin: 10px;
+  display: flex;
+}
+
+.button_carrito input, .button_carrito button {
+  margin: 25px;
+}

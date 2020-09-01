@@ -77,3 +77,6 @@ app.listen(3002, () => {
     console.log('probando el servidor');
 });
 */
+// ID CLIENTE google api 1086531099334-orhot4p7go2rg7vh7jvv54c1pkoorovb.apps.googleusercontent.com
+
+// Secreto Cliente  o0v98Y4GsMdMF0_eGVeHjstQ

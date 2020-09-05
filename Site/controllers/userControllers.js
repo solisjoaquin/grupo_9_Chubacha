@@ -1,5 +1,6 @@
 // importar libreria fs para manejar archivos para la base de datos
 const fs = require('fs')
+const { profile } = require('console')
 
 const userController = {
   index: function (req, res) {
@@ -13,7 +14,10 @@ const userController = {
   // puedo llamarlos con o sin ".ejs"
   register: function (req, res) {
     res.render('register')
-  }
+  },
+  profile: function (req, res) {
+    res.render('userProfile')
+  },
 }
 
 module.exports = userController

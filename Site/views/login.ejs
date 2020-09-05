@@ -1,7 +1,8 @@
-<!--vista de login de usuario-->
+<!--Vista LOGIN del usuario-->
 <!DOCTYPE html>
 <html>
   <head>
+    <!--PARTIAL HEAD-->
     <%- include('partials/head.ejs') %>
     <style>
         .sin-cuenta {
@@ -15,11 +16,13 @@
     </style>
 </head>
   <body>
+    <!--PARTIAL HEADER-->
     <%- include('partials/header.ejs') %>
 
     
 
-        <!-- Login-->
+        
+    <!--INICIO Login-->
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
@@ -33,33 +36,38 @@
                         <span class="focus-input100"></span>
                     </div>
 
-                    <!-- input para la contraseña-->
+                    <!-- INICIO input para la contraseña-->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
                         <input class="input100" type="password" required name="password" placeholder="Contraseña">
                         <span class="focus-input100"></span>
                     </div>
+                    <!-- FIN input para la contraseña-->
 
-                    <!-- Recordar Usuario -->
+                    <!-- INICIO Recordar Usuario -->
                     <div class="field">
                         <label for="remember"> <strong style="color: orangered;">Recordar mis datos</strong></label>
                         <div class="control">
                             <input type="checkbox" name="remember" id="remember">
                         </div>
                     </div>
+                    <!-- FIN Recordar Usuario -->
 
-                    <!--boton de Login-->
+                    <!--INICIO boton de Login-->
                     <div class="container-login100-form-btn m-t-17">
                         <button class="login100-form-btn">
                             Login
                         </button>
                     </div>
+                    <!--FIN boton de Login-->
 
-                    <!--boton de login con google-->
+                    <!--INICIO boton de login con google-->
                     <div class="container-login100-form-btn m-t-17 google-div">
                         <button class="login100-form-btn google-btn">
                             <span class="fab fa-google"></span> Ingresar con Google
                         </button>
                     </div>
+                    <!--FIN boton de login con google-->
+
                     <div>
                         <p class="sin-cuenta">¿No tenes cuenta todavia?<a href="/users/register">Registrate</a></p>
                     </div>
@@ -68,7 +76,11 @@
             </div>
         </div>
     </div>
+    <!--FIN login-->
+
+    <!--PARTIAL FOOTER-->
     <%- include('partials/footer.ejs') %>
+
   </body>
 </html>
 

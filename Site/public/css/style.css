@@ -10,6 +10,93 @@ a {
 
  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+/*INDEX CSS*/
+.imgheader {
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+
+}
+
+.grid > div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 250px;
+  margin: 1rem;
+  height: min-content;
+
+}
+
+.card img {
+  width: 50px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  color: black;
+}
+
+.card__btn {
+  display: block;
+  width: 100%;
+
+
+  font-size: 1rem;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  color: white;
+  background-color: orangered;
+  border: none;
+  border-radius: .4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card__btn span {
+  /*margin-left: 1rem; */
+  transition: 0.2s;
+}
+
+.card__btn:hover,
+.card__btn:active {
+  background-color: black;
+}
+
+.card__btn:hover span,
+.card__btn:active span {
+  margin-left: 1rem;
+}
+
+h4 b, div p {
+  color: black;
+}
+
+div button span, div button a {
+padding-right: 7px;
+color: white;
+}
+
+.title-productos {
+padding-left: 10px;
+margin: 20px;
+
+
+}
+.container-index{
+padding: 25px;
+}
+
 /*WHATSAPP CSS*/
 
 .whatsapp {

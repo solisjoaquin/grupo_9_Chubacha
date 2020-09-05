@@ -28,6 +28,7 @@ router.get('/:id', controller.detailproduct)
 
 // ruta para acceder a la vista de editar un producto
 router.get('/:id/editar', controller.edit)
+
 // ruta que permite editar el valor de un producto
 router.put('/:id', controller.update)
 

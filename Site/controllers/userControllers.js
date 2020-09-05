@@ -16,8 +16,8 @@ const userController = {
     res.render('register')
   },
   profile: function (req, res) {
-    res.render('userProfile')
-  },
+    res.render('profile.ejs')
+  }
 }
 
 module.exports = userController

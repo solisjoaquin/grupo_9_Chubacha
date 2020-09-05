@@ -27,11 +27,14 @@ app.use(methodOverride('_method'))
 var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/usuarios')
 var productsRouter = require('./routes/productos')
+const userController = require('./controllers/userControllers')
+
 
 // establecer las rutas a usar
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/productos', productsRouter)
+
 
 // ---------------------------------------------
 // mostrar pantalla de error 404. usa el ejs 'not-found'

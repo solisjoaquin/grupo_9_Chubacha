@@ -1,13 +1,13 @@
-//
-// correr el servidor
-// nodemon bin/www
 
+//DEPENDENCIAS
 // ----------------------------------------------
-var express = require('express')
-var path = require('path')
-var app = express()
+const express = require('express')
+const path = require('path')
+const session = require('express-session')
+const app = express()
+
 // instalar para usar el metodo PUT , mas abajo se la utiliza con el use
-var methodOverride = require('method-override')
+const methodOverride = require('method-override')
 
 // configurar el manejo de los archivos ejs
 // view engine setup
@@ -24,9 +24,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 // importar las rutas a usar y setearlas en una variable
-var indexRouter = require('./routes/index')
-var usersRouter = require('./routes/usuarios')
-var productsRouter = require('./routes/productos')
+let indexRouter = require('./routes/index')
+let usersRouter = require('./routes/usuarios')
+let productsRouter = require('./routes/productos')
 const userController = require('./controllers/userControllers')
 
 

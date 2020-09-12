@@ -1,9 +1,10 @@
-// importar libreria fs para manejar archivos para la base de datos
+// IMPORTS
 const fs = require('fs')
 const { profile } = require('console')
 const bcrypt = require('bcryptjs')
 const cookie = require('cookie-parser')
 
+// ACTION
 const userController = {
   index: function (req, res) {
     res.send('lista de usuarios')
@@ -22,4 +23,5 @@ const userController = {
   }
 }
 
+// EXPORT
 module.exports = userController

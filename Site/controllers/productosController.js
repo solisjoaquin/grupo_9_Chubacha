@@ -1,10 +1,9 @@
+// IMPORT
 const fs = require('fs')
 const path = require('path')
 
+// ACTION
 const productosController = {
-  // estoy mandando los archivos ejs con render
-  // puedo llamarlos con o sin ".ejs"
-
   index: (req, res) => {
     const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' })
     const productos = JSON.parse(productosJSON)
@@ -37,12 +36,12 @@ const productosController = {
     // res.send(idProducto)
   },
 
-  // traer vista de creacion de producto por get
+  // GET Producto
   create: (req, res) => {
     res.render('crearproducto')
   },
 
-  // crear producto por POST
+  // CREAR Producto POST
   store: (req, res, next) => {
     const producto = {
       nombre: req.body.nombre,
@@ -52,12 +51,12 @@ const productosController = {
       imagen: req.files[0].filename
     }
     const archivoProductos = fs.readFileSync('productos.json', { encoding: 'utf-8' })
-    let productos
-    if (archivoProductos == '') {
-      productos = []
-    } else {
-      productos = JSON.parse(archivoProductos)
-    };
+      let productos
+        if (archivoProductos === '') {
+        productos = []
+        } else {
+        productos = JSON.parse(archivoProductos)
+        };
     productos.push(producto)
 
     const productosJSON = JSON.stringify(productos)
@@ -67,7 +66,7 @@ const productosController = {
     res.redirect('/')
   },
 
-  // editar producto por PUT
+  // EDITAR Producto POST
   update: (req, res) => {
     const idProducto = req.params.id
 
@@ -82,7 +81,7 @@ const productosController = {
     const archivoProductos = fs.readFileSync('./data/productos.json', { encoding: 'utf-8' })
     productos = JSON.parse(archivoProductos)
 
-    // reemplazo con los nuevos elementos
+    // REEMPLAZO con nuevos elementos
     for (let i = 0; i < productos.length; i++) {
       if (productos[i].id == (idProducto)) {
         productos[i].nombre = req.body.nombre,
@@ -102,7 +101,7 @@ const productosController = {
         res.send(putVar) */
   },
 
-  // eliminar prouducto por DELETE
+  // DELETE Producto
   delete: (req, res) => {
     res.send('producto eliminado')
   }

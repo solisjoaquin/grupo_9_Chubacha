@@ -1,5 +1,5 @@
 
-//DEPENDENCIAS
+// DEPENDENCIAS
 // ----------------------------------------------
 const express = require('express')
 const path = require('path')
@@ -24,17 +24,15 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 // importar las rutas a usar y setearlas en una variable
-let indexRouter = require('./routes/index')
-let usersRouter = require('./routes/usuarios')
-let productsRouter = require('./routes/productos')
+const indexRouter = require('./routes/index')
+const usersRouter = require('./routes/usuarios')
+const productsRouter = require('./routes/productos')
 const userController = require('./controllers/userControllers')
-
 
 // establecer las rutas a usar
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/productos', productsRouter)
-
 
 // ---------------------------------------------
 // mostrar pantalla de error 404. usa el ejs 'not-found'

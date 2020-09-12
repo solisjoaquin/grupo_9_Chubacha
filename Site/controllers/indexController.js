@@ -1,12 +1,10 @@
 const fs = require('fs')
 
-const indexController = {
-  
+const indexController = {  
   // estoy mandando los archivos ejs con render
   // puedo llamarlos con o sin ".ejs"
 
   index: function (req, res, next) {
-
     // lee el archivo JSON y lo guarda en productosJSON
     const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' })
 

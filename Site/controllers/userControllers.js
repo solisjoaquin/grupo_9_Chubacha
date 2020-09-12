@@ -2,7 +2,7 @@
 const fs = require('fs')
 const { profile } = require('console')
 const bcrypt = require('bcryptjs')
-
+const cookie = require('cookie-parser')
 
 const userController = {
   index: function (req, res) {

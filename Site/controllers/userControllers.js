@@ -1,6 +1,8 @@
 // importar libreria fs para manejar archivos para la base de datos
 const fs = require('fs')
 const { profile } = require('console')
+const bcrypt = require('bcryptjs')
+
 
 const userController = {
   index: function (req, res) {

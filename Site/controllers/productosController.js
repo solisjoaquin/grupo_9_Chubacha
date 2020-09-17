@@ -2,6 +2,11 @@
 const fs = require('fs')
 const path = require('path')
 
+//-----------------------------
+const db = require('database')
+//----------------------------
+
+
 // ACTION
 const productosController = {
   index: (req, res) => {
@@ -39,10 +44,28 @@ const productosController = {
   // GET Producto
   create: (req, res) => {
     res.render('crearproducto')
+
+    /*
+    db.Product.findAll()
+      .then(function(products){
+          return res.render("Products", {products.products})
+      })
+    
+    */
   },
 
   // CREAR Producto POST
   store: (req, res, next) => {
+
+    /*
+    db.Product.create({
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      precio: req.body.precio,
+      tipoProductos: req.body.tipoProductos,
+      imagen: req.files[0].filename
+    }),
+    */
     const producto = {
       nombre: req.body.nombre,
       descripcion: req.body.descripcion,

@@ -91,6 +91,19 @@ const productosController = {
 
   // EDITAR Producto POST
   update: (req, res) => {
+
+    /*
+    let pedidoProdut= db.Product.findByPk(req.params.id);
+    
+    let pedidoCategoryProduct = db.CategoryProduc.findAll();
+
+    Promise.all(pedidoProduct, pedidoCategoryProduct)
+      .then(function(product, category_product){
+          res.render("editProduct",{product:product, category_product: category_product})
+      })
+    
+    */
+
     const idProducto = req.params.id
 
     /*         let producto = {

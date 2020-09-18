@@ -1,37 +1,26 @@
-module.exports = function(sequalize, dataType){
-    
-    let alias = "category_product";
+'use strict';
 
-    let cols = {
-       id :{
-            type:dataType.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-       }, 
-       category_name:{
-            type:dataType.STRING
-       },
+const { static } = require('express');
 
+const{
+    Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes)=>{
+    class Category extends Model{
+
+        static associate(models){
+
+        }
     }
 
-    let config = {
-        tableName: "products",
+    Category.init({
+
+        name: DataTypes.STRING,
+    },{
+        sequelize,
+        modelName: 'Category',
         timestamps: false
-    }
-    
-    let Product = sequalize.define(alias, cols, config);
-    // esta parte no esta bien conectada todavia
-    /* hasMany, belongsToMany, belongsTo*/
-    Product.associate = function(models){
-        Product.hasMany(models.Shop,{
-            as : "product",
-            //through: 
-            // otherKey:
-            //timestamps:
+    });
+    return Category;
 
-            foreignKey:""
-        })
-    }
-   
-    return Product;
-}
+};

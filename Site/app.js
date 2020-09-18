@@ -28,6 +28,20 @@ const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/usuarios')
 const productsRouter = require('./routes/productos')
 const userController = require('./controllers/userControllers')
+const user = require('./database/models/user');
+
+
+const {user, product} = require("./database/models")
+
+/* probando sequelize -------------------*/
+app.get('/sql', (req,res)=>{
+    user.findAll()
+        .then(movies =>{
+            res.send(movies);
+        })
+})
+
+/*------------------------------------- */
 
 // establecer las rutas a usar
 app.use('/', indexRouter)

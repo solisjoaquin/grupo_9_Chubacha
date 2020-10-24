@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const indexController = {  
+const indexController = {
   // estoy mandando los archivos ejs con render
   // puedo llamarlos con o sin ".ejs"
 

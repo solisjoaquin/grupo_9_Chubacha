@@ -1,11 +1,10 @@
 // IMPORT
 const fs = require('fs')
-const path = require('path')
+// const path = require('path')
 
-//-----------------------------
-const db = require('database')
-//----------------------------
-
+// -----------------------------
+// const db = require('database')
+// ----------------------------
 
 // ACTION
 const productosController = {
@@ -50,13 +49,12 @@ const productosController = {
       .then(function(products){
           return res.render("Products", {products.products})
       })
-    
+
     */
   },
 
   // CREAR Producto POST
   store: (req, res, next) => {
-
     /*
     db.Product.create({
       nombre: req.body.nombre,
@@ -74,12 +72,12 @@ const productosController = {
       imagen: req.files[0].filename
     }
     const archivoProductos = fs.readFileSync('productos.json', { encoding: 'utf-8' })
-      let productos
-        if (archivoProductos === '') {
-        productos = []
-        } else {
-        productos = JSON.parse(archivoProductos)
-        };
+    let productos
+    if (archivoProductos === '') {
+      productos = []
+    } else {
+      productos = JSON.parse(archivoProductos)
+    };
     productos.push(producto)
 
     const productosJSON = JSON.stringify(productos)
@@ -91,17 +89,16 @@ const productosController = {
 
   // EDITAR Producto POST
   update: (req, res) => {
-
     /*
     let pedidoProdut= db.Product.findByPk(req.params.id);
-    
+
     let pedidoCategoryProduct = db.CategoryProduc.findAll();
 
     Promise.all(pedidoProduct, pedidoCategoryProduct)
       .then(function(product, category_product){
           res.render("editProduct",{product:product, category_product: category_product})
       })
-    
+
     */
 
     const idProducto = req.params.id

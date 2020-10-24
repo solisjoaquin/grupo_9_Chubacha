@@ -1,0 +1,26 @@
+  /home/erico/Escritorio/DH/Site/app.js:6:7: 'session' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/app.js:30:7: 'userController' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/app.js:31:7: 'user' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:3:7: 'path' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:6:7: 'db' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:115:5: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:118:25: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:119:11: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:119:27: Expected '===' and instead saw '=='.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:120:9: Expected an assignment or function call and instead saw an expression.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:120:9: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:120:46: Unexpected use of comma operator.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:121:9: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:122:9: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:123:9: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/productosController.js:127:42: 'productos' is not defined.
+  /home/erico/Escritorio/DH/Site/controllers/userControllers.js:2:7: 'fs' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/controllers/userControllers.js:3:9: 'profile' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/controllers/userControllers.js:4:7: 'bcrypt' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/controllers/userControllers.js:5:7: 'cookie' is assigned a value but never used.
+  /home/erico/Escritorio/DH/Site/database/models/category_product.js:3:9: Parsing error: The keyword 'static' is reserved
+  /home/erico/Escritorio/DH/Site/database/models/category_user.js:3:9: Parsing error: The keyword 'static' is reserved
+  /home/erico/Escritorio/DH/Site/database/models/index.js:8:24: Use path.join() or path.resolve() instead of string concatenation.
+  /home/erico/Escritorio/DH/Site/database/models/product.js:3:9: Parsing error: The keyword 'static' is reserved
+  /home/erico/Escritorio/DH/Site/public/js/map.js:1:13: 'L' is not defined.
+  /home/erico/Escritorio/DH/Site/public/js/map.js:3:1: 'L' is not defined.

@@ -3,7 +3,7 @@
 // ----------------------------------------------
 const express = require('express')
 const path = require('path')
-const session = require('express-session')
+// const session = require('express-session')
 const app = express()
 
 // instalar para usar el metodo PUT , mas abajo se la utiliza con el use
@@ -27,9 +27,8 @@ app.use(methodOverride('_method'))
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/usuarios')
 const productsRouter = require('./routes/productos')
-const userController = require('./controllers/userControllers')
-const user = require('./database/models/user');
-
+// const userController = require('./controllers/userControllers')
+// const user = require('./database/models/user')
 
 // establecer las rutas a usar
 app.use('/', indexRouter)

@@ -1,84 +1,107 @@
-
-// DEPENDENCIAS
-// ----------------------------------------------
-const express = require('express')
-const path = require('path')
-// const session = require('express-session')
-const app = express()
+const express = require("express");
+const app = express();
+const path = require("path"); // libreria path para manejar rutas de archivos
+const fs = require("fs"); // libreria filesystem
+const session = require("express-session"); // Sesion
+const auth = require("./middlewares/auth"); // middleware de autenticacion
+const { products, users } = require("./database/models"); // Base de datos
 
 // instalar para usar el metodo PUT , mas abajo se la utiliza con el use
-const methodOverride = require('method-override')
+const methodOverride = require("method-override");
 
 // configurar el manejo de los archivos ejs
 // view engine setup
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 // para el method POST
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false })); // arma el objeto body
 // ------------
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, "public")));
 
-// agregar esta linea para el uso del PUT
-app.use(methodOverride('_method'))
+// session
+app.use(
+  session({
+    secret: "Chubacha login",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+app.use(auth);
+
+// agregar esta linea para el uso del PUT, verifica si existe el method en el querystring
+app.use(methodOverride("_method"));
 
 // importar las rutas a usar y setearlas en una variable
-const indexRouter = require('./routes/index')
-const usersRouter = require('./routes/usuarios')
-const productsRouter = require('./routes/productos')
-// const userController = require('./controllers/userControllers')
-// const user = require('./database/models/user')
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/usuarios");
+const productsRouter = require("./routes/productos");
 
 // establecer las rutas a usar
-app.use('/', indexRouter)
-app.use('/users', usersRouter)
-app.use('/productos', productsRouter)
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/productos", productsRouter);
 
-// ---------------------------------------------
+// llamando a la base de datos
+app.get("/sql", (req, res) => {
+  products.findAll().then((products) => {
+    /* res.send(products);  */
+    res.render("productos", { products });
+  });
+});
+
+app.get("/sqlusers", (req, res) => {
+  users.findAll().then((users) => {
+    res.send(users);
+  });
+});
+
+// APIS
+//......
+
+// API de productos
+//-------------------------------------------
+const cors = require("cors");
+app.use(cors());
+
+app.get("/api/products", (req, res) => {
+  products.findAll().then((products) => {
+    res.json({
+      meta: {
+        status: 200,
+        totalProducts: products.length,
+        totalAmount: products
+          .reduce((total, product) => (total += product.price), 0)
+          .toFixed(2),
+        categories: ["Auricular", "Teclado", "Mouse", "Monitor"],
+        url: "/api/products",
+      },
+      data: products,
+    });
+  });
+});
+// fin de api de productos ------------------------------------------
+
+//API de usuarios
+//-------------------------------------------------------------------
+app.get("/api/users", (req, res) => {
+  users.findAll().then((users) => {
+    res.json({
+      meta: {
+        totalUsers: users.length,
+      },
+      data: users,
+    });
+  });
+});
+
+// fin de api de usuarios ---------------------------------------------
+
 // mostrar pantalla de error 404. usa el ejs 'not-found'
 app.use(function (req, res, next) {
-  res.status(404).render('not-found')
-})
-
-module.exports = app
-
-// ****   VIEJO CODIGO  ************************
-
-/* const express = require('express');
-const app = express();
-
-app.use(express.static('public'));
-
-//Pedido a pagina Home
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html')
+  res.status(404).render("not-found");
 });
 
-//Pedido a pagina Productos
-app.get('/producto', (req, res) => {
-    res.sendFile(__dirname + '/views/producto.html' )
-});
-
-//Pedido a pagina Carrito de Compras
-app.get('/carrito', (req, res) => {
-    res.sendFile(__dirname + '/views/carrito.html')
-});
-
-//Pedido a pagina Registro y Login
-app.get('/registro', (req, res) => {
-    res.sendFile(__dirname + '/views/registro.html')
-});
-
-//Pedido a pagina Registro y Login
-app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/views/login.html')
-});
-
-app.listen(3002, () => {
-    console.log('probando el servidor');
-});
-*/
-// ID CLIENTE google api 1086531099334-orhot4p7go2rg7vh7jvv54c1pkoorovb.apps.googleusercontent.com
-
-// Secreto Cliente  o0v98Y4GsMdMF0_eGVeHjstQ
+module.exports = app;

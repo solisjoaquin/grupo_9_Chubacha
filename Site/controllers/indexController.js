@@ -1,5 +1,7 @@
 const fs = require('fs')
 
+const {products} = require('../database/models')
+
 const indexController = {
   // estoy mandando los archivos ejs con render
   // puedo llamarlos con o sin ".ejs"
@@ -11,7 +13,13 @@ const indexController = {
     // parsea en JSON en un objeto literal
     const productos = JSON.parse(productosJSON)
 
-    res.render('index', { producto: productos })
+    products.findAll()
+        .then( products =>{
+        /* res.send(products);  */
+        res.render('index',{products})
+    }) 
+
+    /* res.render('index', { producto: productos }) */
   }
 }
 

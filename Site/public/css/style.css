@@ -90,6 +90,7 @@ color: white;
 .title-productos {
 padding-left: 10px;
 margin: 20px;
+text-align: center;
 
 
 }
@@ -163,7 +164,7 @@ h1 {
   
   nav {
     background: orangered;
-    height: 80px;
+    height: 90px;
     width: 100%;
   }
   

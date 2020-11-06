@@ -1,7 +1,8 @@
 <!--Vista LOGIN del usuario-->
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <!--PARTIAL HEAD-->
     <%- include('partials/head.ejs') %>
     <style>
@@ -9,45 +10,52 @@
             padding: 10px;
             color: black;
         }
+
         .sin-cuenta a {
             padding-left: 5px;
             color: orangered;
         }
     </style>
 </head>
-  <body>
+
+<body>
     <!--PARTIAL HEADER-->
     <%- include('partials/header.ejs') %>
 
-    
 
-        
+
+
     <!--INICIO Login-->
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
-                <form class="login100-form validate-form flex-sb flex-w">
+                <form class="login100-form validate-form flex-sb flex-w" action="/users/login" method="POST">
                     <span class="login100-form-title palabraLogin">
                         Login
                     </span>
 
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100"  required name="email" placeholder="Correo electronico">
+                        <input class="input100" required name="email" placeholder="Correo electronico">
                         <span class="focus-input100"></span>
                     </div>
+                    <p style="color: red;"><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
 
                     <!-- INICIO input para la contraseña-->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" type="password" required name="password" placeholder="Contraseña">
+                        <input class="input100" type="password" name="password" placeholder="Contraseña">
                         <span class="focus-input100"></span>
                     </div>
+                    <p style="color: red;"><%= locals.errors && errors.password ? errors.password.msg : '' %></p>
+
                     <!-- FIN input para la contraseña-->
 
                     <!-- INICIO Recordar Usuario -->
                     <div class="field">
-                        <label for="remember"> <strong style="color: orangered;">Recordar mis datos</strong></label>
                         <div class="control">
                             <input type="checkbox" name="remember" id="remember">
+                            <label for="remember"> <strong style="color: orangered;">Recordar mis datos</strong></label>
+
+
                         </div>
                     </div>
                     <!-- FIN Recordar Usuario -->
@@ -60,17 +68,16 @@
                     </div>
                     <!--FIN boton de Login-->
 
-                    <!--INICIO boton de login con google-->
-                    <div class="container-login100-form-btn m-t-17 google-div">
-                        <button class="login100-form-btn google-btn">
-                            <span class="fab fa-google"></span> Ingresar con Google
-                        </button>
-                    </div>
-                    <!--FIN boton de login con google-->
+
 
                     <div>
                         <p class="sin-cuenta">¿No tenes cuenta todavia?<a href="/users/register">Registrate</a></p>
                     </div>
+
+                    <% locals.errors && console.log(errors); %>
+
+
+
 
                 </form>
             </div>
@@ -81,6 +88,6 @@
     <!--PARTIAL FOOTER-->
     <%- include('partials/footer.ejs') %>
 
-  </body>
-</html>
+</body>
 
+</html>

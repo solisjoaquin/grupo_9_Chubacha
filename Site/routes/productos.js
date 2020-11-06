@@ -3,6 +3,7 @@ var router = express.Router()
 var controller = require('../controllers/productosController.js')
 var path = require('path')
 
+// manejo de archivos----------------------------------------------------
 var multer = require('multer')
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -12,14 +13,14 @@ var storage = multer.diskStorage({
     cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname))
   }
 })
-
 var upload = multer({ storage: storage })
+//----------------------------------------------------------------------
 
 router.get('/', controller.index)
-
 router.get('/carrito', controller.carrito)
 
-// la ruta get trae la vista, el post envia la info
+
+// Rutas para mostrar la vista y crear el producto
 router.get('/crearproducto', controller.create)
 router.post('/crearproducto', upload.any(), controller.store)
 

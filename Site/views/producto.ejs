@@ -51,18 +51,24 @@
 
     <div class="producto-desc">
 
-      <img src="/images/auri2.JPG" alt="Avatar" length="250px" width="250px">
-      
+      <img src="/images/productos/<%= productoAEditar.image %>" alt="Avatar" length="250px" width="250px">
+
       <h2>Producto <%= productoAEditar.id %></h2>
-      <h2><%= productoAEditar.nombre %></h2>
+      <h2><%= productoAEditar.name %></h2>
       <h3>Descripcion</h3>
-      <p><%= productoAEditar.descripcion %>.</p>
+      <p><%= productoAEditar.description %>.</p>
       <h3>Categoria</h3>
-      <p><%= productoAEditar.tipoProductos %> </p>
+      <p><%= productoAEditar.category_id %> </p>
       <h3>Precio</h3>
-      <p>$<%= productoAEditar.precio %></p>
+      <p>$<%= productoAEditar.price %></p>
 
     </div>
+
+
+
+    <% if(locals.user ){ %>
+
+    <% if ( user.category == 1){ %>
     <div>
       <a href="/productos/<%= productoAEditar.id %>/editar">
         <button class="button button2" type="button">
@@ -75,6 +81,25 @@
         </button>
       </form>
     </div>
+    <% }  else {%>
+    <div>
+      <a href="/productos/carrito">
+        <button class="button button2" type="button">
+          Comprar
+        </button>
+      </a>
+    </div>
+
+    <% } } else {%>
+
+    <div>
+      <a href="/users/login">
+        <button class="button button2" type="button">
+          Comprar
+        </button>
+      </a>
+    </div>
+    <% } %>
   </div>
 
 

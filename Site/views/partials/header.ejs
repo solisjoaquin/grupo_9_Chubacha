@@ -8,16 +8,26 @@
 </header> -->
 
 <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo"><a class="logo-a" href="/">Chubacha</a></label>
-    <ul>
-      <li><a class="" href="/">Home</a></li>
-      <li><a href='/users/login'>Iniciar sesion</a></li>
-      <li><a href='/productos/crearproducto'>+</a></li>
-      <!-- <li><a href="/users/register" class="register" >Registrarse</a></li> -->
-      <li> <a href="/productos/carrito" style="font-size:24px"><i class="fa fa-shopping-cart"></i></a></li>
-    </ul>
-  </nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <label class="logo"><a class="logo-a" href="/">Chubacha</a></label>
+  <ul>
+    <!-- <li><a class="" href="/">Home</a></li> -->
+    <!-- <li><a href='/users/login'>Iniciar sesion</a></li> -->
+    <!-- <li><a href='/productos/crearproducto'>+</a></li> -->
+
+    <% if(locals.user){ %>
+    <a style="color: white;" href="/users/profile"><%= user.first_name %></a>
+    <li><a class="" href="/users/logout">Logout</a></li>
+    <% if (user.category == 1) { %>
+    <li><a href='/productos/crearproducto'>+</a></li>
+    <% } %>
+    <% } else {%>
+    <li><a class="" href="/users/login">Login</a></li>
+    <% } %>
+    <!-- <li><a href="/users/register" class="register" >Registrarse</a></li> -->
+    <li> <a href="/productos/carrito" style="font-size:24px"><i class="fa fa-shopping-cart"></i></a></li>
+  </ul>
+</nav>

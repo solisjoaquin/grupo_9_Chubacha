@@ -10,31 +10,38 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Font Awesome  -->
-<!--   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
  -->
   <!-- Bootstrap Scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
- <!-- CSS Style -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- CSS Style -->
 
 
- <!-- CSS Style general -->
- <link rel="stylesheet" href="../public/css/style.css">
- <!-- CSS Leaflet Mapa -->
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
- integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
- crossorigin=""/>
+  <!-- CSS Style general -->
+  <link rel="stylesheet" href="../public/css/style.css">
+  <!-- CSS Leaflet Mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
   <!-- JS Leaflet Script -->
- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
-<!--CSS Whatsapp Button--> 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+  <!--CSS Whatsapp Button-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -44,89 +51,83 @@
 
   <img class="imgheader" src="/images/porta.png" alt=""><br>
   <br>
-  <div>
-    <h1 class="title-productos">Productos mas vendidos</h1>
-    
-  </div>
 
-  
-    <div class="grid">
+  <section class="white-section" id="features">
 
-      <% for ( let i = 0; i < producto.length; i++ ){ %>
-      <div class="card">
-        <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
-        <div class="container">
-          <h4><b><%= producto[i].nombre %></b></h4>
-          
-          <p>$ <%= producto[i].precio %></p>
-          <a href="/productos/<%= producto[i].id %>"><button class="card__btn">Explorar <span>→</span></button></a>
+    <div class="container features-container container-index">
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="fas fa-check-circle fa-4x features-icon"></i>
+          <h3 class="features-header h3-title-bootstrap">Pago 100% seguro</h3>
+          <p class="features-body">Tus compras estan aseguradas con Mercado Pago.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="fas fa-bullseye fa-4x features-icon"></i>
+          <h3 class="features-header h3-title-bootstrap">La mejor calidad</h3>
+          <p class="features-body">En Chubacha nos comprometemos en ofrecer productos de la mejor calidad.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="fas fa-heart fa-4x features-icon"></i>
+          <h3 class="features-header h3-title-bootstrap">Garantia de 2 años</h3>
+          <p class="features-body">Si tu producto tiene fallas nosotros te ayudamos.</p>
         </div>
       </div>
-      <%}%>
+    </div>
 
-     </div>   
+  </section>
+
+  <div>
+    <h1 class="title-productos">Productos mas vendidos</h1>
+
+  </div>
+
+
+  <div class="grid">
 
 
 
+    <% products.forEach(product => { %>
+    <div class="card">
+      <img src="images/productos/<%= product.image %>" alt="Avatar" style="width:100%">
+
+      <div class="container">
+        <h4><b><%= product.name %></b></h4>
+
+        <p>$ <%= product.price %></p>
+        <a href="/productos/<%= product.id %>"><button class="card__btn">Explorar <span>→</span></button></a>
+      </div>
+    </div>
+    <%})%>
+
+  </div>
 
 
-  
 
-  <div>    <h1 class="title-productos">Nuevos Productos</h1>
-    
+  <!--   <div>
+    <h1 class="title-productos">Nuevos Productos</h1>
+
     <div class="grid">
 
-      <% for (let i = 0; i < producto.length; i++){ %>
+      <% products.forEach(product => { %>
       <div class="card">
         <img src="/images/auri4.JPG" alt="Avatar" style="width:100%">
         <div class="container">
-          <h4><b><%= producto[i].nombre %></b></h4>
-          <p>$ <%= producto[i].precio %></p>
-          <a href="/productos/<%= producto[i].id %>"><button class="card__btn">Explore <span>→</span></button></a>
+          <h4><b><%= product.name %></b></h4>
+          <p>$ <%= product.price %></p>
+          <a href="/productos/<%= product.id %>"><button class="card__btn">Explore <span>→</span></button></a>
         </div>
       </div>
-      <%}%>
+      <%})%>
 
-     </div> 
-     
-     <section class="white-section" id="features">
-
-      <div class="container features-container container-index">
-        <div class="row">
-          <div class="feature-box col-lg-4">
-            <i class="fas fa-check-circle fa-4x features-icon"></i>
-            <h3 class="features-header h3-title-bootstrap">Pago 100% seguro</h3>
-            <p class="features-body">Tus compras estan aseguradas con Mercado Pago.</p>
-          </div>
-  
-          <div class="feature-box col-lg-4">
-            <i class="fas fa-bullseye fa-4x features-icon"></i>
-            <h3 class="features-header h3-title-bootstrap">La mejor calidad</h3>
-            <p class="features-body">En Chubacha nos comprometemos en ofrecer productos de la mejor calidad.</p>
-          </div>
-  
-          <div class="feature-box col-lg-4">
-            <i class="fas fa-heart fa-4x features-icon"></i>
-            <h3 class="features-header h3-title-bootstrap">Garantia de 2 años</h3>
-            <p class="features-body">Si tu producto tiene fallas nosotros te ayudamos.</p>
-          </div>
-        </div>
-      </div>
-  
-    </section>
-
-
-    <div>
-      <p id="mapid"></p>
-          <h3 style="color: orangered;">Podes retirar tus productos en persona. Conoce donde estamos</h3>
-          <p></p>
-  </div>
+    </div> -->
 
 
 
   <%- include('partials/footer.ejs') %>
 </body>
+
 </html>
 
 <script src="/public/js/map.js"></script>
-

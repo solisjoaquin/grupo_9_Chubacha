@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <%- include('partials/head.ejs') %>
-  <body>
+<%- include('partials/head.ejs') %>
+
+<body>
     <%- include('partials/header.ejs') %>
-    
+
     <!-- Carrito-------------------------------------------->
 
+    <h1 style="text-align: center;">Carrito no implementado aun</h1>
 
     <div class="limiter">
 
@@ -19,7 +21,7 @@
                     <th>Total</th>
                 </tr>
                 <!--Solo mostrara el listado del carrito pero con paso de a 2-->
-                <% for ( let i = 0; i < productos.length; i= i+2 ){ %>
+                <!-- <% for ( let i = 0; i < productos.length; i= i+2 ){ %>
                 <tr>
                     <td class="teclado"><%= productos[i].nombre %></td>
                     <td>$<%= productos[i].precio%></td>
@@ -27,7 +29,7 @@
                     <td>$720.00</td>
                 </tr>
 
-                <% } %>
+                <% } %> -->
 
             </table>
 
@@ -79,5 +81,6 @@
 
 
     <%- include('partials/footer.ejs') %>
-  </body>
+</body>
+
 </html>

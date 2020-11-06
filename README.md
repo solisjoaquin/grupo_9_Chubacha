@@ -65,4 +65,9 @@
 
 Seguimiento: [TRELLO](https://trello.com/b/pFPJKMHB/grupo-9chubacha)
 
+# Link al dashboard
+
+El dashboard lee los archivos Json que se envian a traves de la api del proyecto. En el archivo App.js del dashboard estan los fetch indicando las URLs para cambiar el puerto o los links dependiendo donde esta el proyecto. Si el servidor de chubacha no esta levantado, el dashboard solo mostrara carteles de "cargando datos".
+
+[repo](https://github.com/solisjoaquin/dashboard-grupo9)
 

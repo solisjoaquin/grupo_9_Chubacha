@@ -7,39 +7,39 @@
 
   <div class="limiter">
     <form action="/productos/<%= (productoAEditar.id) %>?_method=PUT" method="POST">
-    <div class="container-login100">
-      <div class="product_div">
-        <p>Nombre del producto</p>
-        <input class="input100" type="text" name="nombre" value="<%= productoAEditar.nombre %>">
-        <span class="focus-input100"></span>
+      <div class="container-login100">
+        <div class="product_div">
+          <p>Nombre del producto</p>
+          <input class="input100" type="text" name="nombre" value="<%= productoAEditar.name %>">
+          <span class="focus-input100"></span>
 
-        <p>Descripcion</p>
-        <input class="input100" type="text" name="descripcion" value="<%= productoAEditar.descripcion %>">
-        <span class="focus-input100"></span>
+          <p>Descripcion</p>
+          <input class="input100" type="text" name="descripcion" value="<%= productoAEditar.description %>">
+          <span class="focus-input100"></span>
 
-        <p>Precio</p>
-        <input class="input100" type="text" name="precio" value="<%= productoAEditar.precio %>">
-        <span class="focus-input100"></span>
+          <p>Precio</p>
+          <input class="input100" type="text" name="precio" value="<%= productoAEditar.price %>">
+          <span class="focus-input100"></span>
 
-        <p>Categoria</p>
-        <select name="tipoProductos" id="productos">
-          <option value="Teclados">Teclados</option>
-          <option value="Mouse">Mouse</option>
-          <option value="Auriculares">Auriculares</option>
-          <option value="Monitores">Monitores</option>
-        </select>
-      </div>
-      <div>
-        <input class="input100" type="file" id="img" name="img" accept="image/*">
+          <p>Categoria</p>
+          <select name="tipoProductos" id="productos">
+            <option value="Teclados">Teclado</option>
+            <option value="Mouse">Mouse</option>
+            <option value="Auriculares">Auricular</option>
+            <option value="Monitores">CPU</option>
+          </select>
+        </div>
+        <div>
+          <input class="input100" type="file" id="img" name="img" accept="image/*">
 
-        <span class="focus-input100"></span>
+          <span class="focus-input100"></span>
 
-        <div class="button_carrito">
-          <input type="submit" value="publicar" class="login100-form-btn">
+          <div class="button_carrito">
+            <input type="submit" value="publicar" class="login100-form-btn">
+          </div>
         </div>
       </div>
-    </div>
-    </form> 
+    </form>
   </div>
 
 

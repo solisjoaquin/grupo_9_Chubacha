@@ -6,29 +6,29 @@
     <%- include('partials/header.ejs') %>
 
     <div class="limiter">
-    <form method="POST" action="/productos/crearproducto" enctype="multipart/form-data">
-        <div class="container-login100">
-            
+        <form method="POST" action="/productos/crearproducto" enctype="multipart/form-data">
+            <div class="container-login100">
+
                 <div class="product_div">
 
                     <p>Nombre del producto</p>
-                    <input class="input100" type="text" name="nombre">
+                    <input class="input100" type="text" name="name">
                     <span class="focus-input100"></span>
 
                     <p>Descripcion</p>
-                    <input class="input100" type="text" name="descripcion">
+                    <input class="input100" type="text" name="description">
                     <span class="focus-input100"></span>
 
                     <p>Precio</p>
-                    <input class="input100" type="text" name="precio" placeholder="0000.00">
+                    <input class="input100" type="text" name="price" placeholder="0000.00">
                     <span class="focus-input100"></span>
 
                     <p>Categoria</p>
-                    <select name="tipoProductos" id="productos">
-                        <option value="Teclados">Teclados</option>
+                    <select name="category_id" id="productos">
+                        <option value="Teclado">Teclados</option>
                         <option value="Mouse">Mouse</option>
-                        <option value="Auriculares">Auriculares</option>
-                        <option value="Monitores">Monitores</option>
+                        <option value="Auricular">Auriculares</option>
+                        <option value="CPU">CPU</option>
                     </select>
                 </div>
                 <div>
@@ -41,9 +41,9 @@
                     </div>
 
                 </div>
-            
-        </div>
-    </form>
+
+            </div>
+        </form>
     </div>
 
     <%- include('partials/footer.ejs') %>

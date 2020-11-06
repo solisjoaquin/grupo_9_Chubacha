@@ -35,121 +35,118 @@ const productosController = {
   },
 
   edit: (req, res) => {
-    const idProducto = req.params.id;
+    let idProducto = req.params.id;
+    idProducto = idProducto - 1;
 
-    const productosJSON = fs.readFileSync("productos.json", {
+    /* const productosJSON = fs.readFileSync("productos.json", {
       encoding: "utf-8",
     });
     const productos = JSON.parse(productosJSON);
-    const productoAEditar = productos[idProducto - 1];
+    const productoAEditar = productos[idProducto - 1]; */
 
-    res.render("editarproducto", {
+    products.findAll().then((products) => {
+      const productoAEditar = products[idProducto];
+      res.render("editarproducto", { productoAEditar, idProducto });
+    });
+
+/*     res.render("editarproducto", {
       productoAEditar: productoAEditar,
       idProducto: idProducto,
-    });
+    }); */
   },
 
   // GET Producto
   create: (req, res) => {
     res.render("crearproducto");
 
-    /*
-    db.Product.findAll()
-      .then(function(products){
-          return res.render("Products", {products.products})
-      })
-
-    */
   },
 
   // CREAR Producto POST
-  store: (req, res, next) => {
-    /*
-    db.Product.create({
-      nombre: req.body.nombre,
-      descripcion: req.body.descripcion,
-      precio: req.body.precio,
-      tipoProductos: req.body.tipoProductos,
-      imagen: req.files[0].filename
-    }),
-    */
-    const producto = {
-      nombre: req.body.nombre,
-      descripcion: req.body.descripcion,
-      precio: req.body.precio,
-      tipoProductos: req.body.tipoProductos,
-      imagen: req.files[0].filename,
-    };
-    const archivoProductos = fs.readFileSync("productos.json", {
-      encoding: "utf-8",
-    });
-    let productos;
-    if (archivoProductos === "") {
-      productos = [];
-    } else {
-      productos = JSON.parse(archivoProductos);
-    }
-    productos.push(producto);
+  store: (req, res) => {
 
-    const productosJSON = JSON.stringify(productos);
-    fs.writeFileSync("productos.json", productosJSON);
+    /* let errors = validationResult(req);
 
-    // res.render('producto',{producto: producto})
-    res.redirect("/");
+    if (errors.isEmpty()) { */
+
+
+            let newProduct = req.body;
+            newProduct.image = 'default.png';
+
+            if (req.file) {
+                newProduct.image = req.file.filename;
+            } else if (req.body.oldImage) {
+                newProduct.image = req.body.oldImage;
+            }
+
+            delete newProduct.oldImage;
+
+            products.create(newProduct)
+                .then(newProduct => {
+                  return res.redirect('/')
+                    /* return res.redirect('/products/' + newProduct.id); */
+                })
+            
+
+       /*  } */
+        
+        /*  else {
+            // let categories = categoriesModel.all();
+
+            category.findAll()
+                .then(categories => {
+                    return res.render('products/create',  { 
+                        categories,
+                        errors: errors.mapped(), 
+                        products: req.body
+                    });
+                })
+                .catch(error => {
+                    console.log(error);
+                    return res.redirect('/');
+                })
+        } */
   },
 
   // EDITAR Producto POST
   update: (req, res) => {
-    /*
-    let pedidoProdut= db.Product.findByPk(req.params.id);
 
-    let pedidoCategoryProduct = db.CategoryProduc.findAll();
+    let updateProduct = req.body;
+        
+        if (req.file) {
+            updateProduct.image = req.file.filename;
+        } else if (req.body.oldImage) {
+            updateProduct.image = req.body.oldImage;
+        }
 
-    Promise.all(pedidoProduct, pedidoCategoryProduct)
-      .then(function(product, category_product){
-          res.render("editProduct",{product:product, category_product: category_product})
-      })
+        delete updateProduct.oldImage;
 
-    */
+        // groupId = groupsModel.update(group);
+        // res.redirect('/groups/' + groupId)
 
-    const idProducto = req.params.id;
+        products.update(updateProduct, { where: { id: req.params.id } })
+            .then(updateProduct => {
+                return res.redirect('/productos/' + req.params.id);
+            })
 
-    /*         let producto = {
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            tipoProductos: req.body.tipoProductos
-        } */
-
-    // leer el archivo JSON y parsearlo a objeto literal
-    const archivoProductos = fs.readFileSync("./data/productos.json", {
-      encoding: "utf-8",
-    });
-    productos = JSON.parse(archivoProductos);
-
-    // REEMPLAZO con nuevos elementos
-    for (let i = 0; i < productos.length; i++) {
-      if (productos[i].id == idProducto) {
-        (productos[i].nombre = req.body.nombre),
-          (productos[i].descripcion = req.body.descripcion),
-          (productos[i].precio = req.body.precio),
-          (productos[i].tipoProductos = req.body.tipoProductos);
-      }
-    }
-
-    const productosJSON = JSON.stringify(productos);
-    fs.writeFileSync("productos.json", productosJSON);
-
-    // res.render('producto',{producto: producto})
-    res.redirect("/");
-    // res.send(req.body)
-    /* let putVar = req.body
-        res.send(putVar) */
   },
 
   // DELETE Producto
-  delete: (req, res) => {
-    res.send("producto eliminado");
+  delete: async (req, res) => {
+
+    
+    existingProduct = await products.findByPk(req.params.id);
+    let imagePath = path.join(__dirname, '../public/images/productos/' + existingProduct.image);
+
+    products.destroy({ where: { id: req.params.id } })
+    .then(deletedGroup => {
+        if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath)
+        }
+
+        return res.redirect('/');
+    })
+
+    /* res.send("producto eliminado"); */
   },
 };
 

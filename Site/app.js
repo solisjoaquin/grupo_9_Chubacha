@@ -38,11 +38,13 @@ app.use(methodOverride("_method"));
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/usuarios");
 const productsRouter = require("./routes/productos");
+const apiRouter = require('./routes/api')
 
 // establecer las rutas a usar
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/productos", productsRouter);
+app.use('/api', apiRouter);
 
 // llamando a la base de datos
 app.get("/sql", (req, res) => {
@@ -58,46 +60,6 @@ app.get("/sqlusers", (req, res) => {
   });
 });
 
-// APIS
-//......
-
-// API de productos
-//-------------------------------------------
-const cors = require("cors");
-app.use(cors());
-
-app.get("/api/products", (req, res) => {
-  products.findAll().then((products) => {
-    res.json({
-      meta: {
-        status: 200,
-        totalProducts: products.length,
-        totalAmount: products
-          .reduce((total, product) => (total += product.price), 0)
-          .toFixed(2),
-        categories: ["Auricular", "Teclado", "Mouse", "Monitor"],
-        url: "/api/products",
-      },
-      data: products,
-    });
-  });
-});
-// fin de api de productos ------------------------------------------
-
-//API de usuarios
-//-------------------------------------------------------------------
-app.get("/api/users", (req, res) => {
-  users.findAll().then((users) => {
-    res.json({
-      meta: {
-        totalUsers: users.length,
-      },
-      data: users,
-    });
-  });
-});
-
-// fin de api de usuarios ---------------------------------------------
 
 // mostrar pantalla de error 404. usa el ejs 'not-found'
 app.use(function (req, res, next) {

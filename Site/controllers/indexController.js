@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const {products} = require('../database/models')
+const { products } = require('../database/models')
 
 const indexController = {
   // estoy mandando los archivos ejs con render
@@ -8,16 +8,16 @@ const indexController = {
 
   index: function (req, res, next) {
     // lee el archivo JSON y lo guarda en productosJSON
-    const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' })
+    /* const productosJSON = fs.readFileSync('productos.json', { encoding: 'utf-8' }) */
 
     // parsea en JSON en un objeto literal
-    const productos = JSON.parse(productosJSON)
+    /* const productos = JSON.parse(productosJSON) */
 
     products.findAll()
-        .then( products =>{
+      .then(products => {
         /* res.send(products);  */
-        res.render('index',{products})
-    }) 
+        res.render('index', { products })
+      })
 
     /* res.render('index', { producto: productos }) */
   }

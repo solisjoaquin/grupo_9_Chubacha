@@ -2,6 +2,8 @@ const fs = require("fs");
 const bcrypt = require("bcryptjs");
 const cookie = require("cookie-parser");
 
+const { users } = require('../database/models')
+
 /* console.log(bcrypt.hashSync('123456', 10)) */
 
 const { check, validationResult, body } = require("express-validator");
@@ -23,9 +25,30 @@ const userController = {
     /* console.log(error.mapped) */
 
     if (error.isEmpty()) {
-      let user = usersModel.findByField("email", req.body.email);
 
-      if (user) {
+      users.findAll().then((users) => {
+
+        const user = users.find(user => user.email == req.body.email);
+        console.log(user)
+
+
+        if (user) {
+          if (bcrypt.compareSync(req.body.password, user.password)) {
+            delete user.password;
+            req.session.user = user;
+            res.redirect("/");
+          } else {
+            res.render("login", {
+              errors: { password: { msg: "El password es incorrecto" } },
+              user: req.body,
+            });
+          }
+        }
+
+      })
+
+      /* let user = usersModel.findByField("email", req.body.email);
+       if (user) {
         if (bcrypt.compareSync(req.body.password, user.password)) {
           delete user.password;
           req.session.user = user;
@@ -36,13 +59,16 @@ const userController = {
             user: req.body,
           });
         }
-      }
+      } */
 
       /* res.send( user || 'No se encontro el usuario') */
     } else {
       res.render("login", { errors: error.mapped() });
     }
   },
+
+
+
   // estoy mandando los archivos ejs con render
   // puedo llamarlos con o sin ".ejs"
   logout: (req, res) => {

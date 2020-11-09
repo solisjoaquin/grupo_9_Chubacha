@@ -70,8 +70,8 @@ create table `user`
 LOCK TABLES `user` WRITE;
 INSERT INTO `user`
 VALUES
-    (1, 'joaquin', 'rodriguez', 'joa@gmail.com', '123456', 'profile1.jpg', '1'),
-    (2, 'sol', 'pedroza', 'sol@gmail.com', '123456', 'profile2.jpg', '2'),
+    (1, 'joaquin', 'rodriguez', 'joa@gmail.com', '$2a$10$hZeadYFEwzGVmg.31gk6VuP5VJEhM3.R9/07YmlcoaSXHY1C0XpQ6', 'profile1.jpg', '1'),
+    (2, 'sol', 'pedroza', 'sol@gmail.com', '$2a$10$hZeadYFEwzGVmg.31gk6VuP5VJEhM3.R9/07YmlcoaSXHY1C0XpQ6', 'profile2.jpg', '2'),
     (3, 'eric', 'fullstack', 'eric@gmail.com', '123456', 'profile3.jpg', '1'),
     (4, 'martin', 'siete', 'martin@hotmail.com', 'asd123', 'profile4.jpg', '2');
 UNLOCK TABLES;

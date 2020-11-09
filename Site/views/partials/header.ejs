@@ -19,9 +19,9 @@
     <!-- <li><a href='/productos/crearproducto'>+</a></li> -->
 
     <% if(locals.user){ %>
-    <a style="color: white;" href="/users/profile"><%= user.first_name %></a>
+    <a style="color: white;" href="/users/profile"><%= user.name %></a>
     <li><a class="" href="/users/logout">Logout</a></li>
-    <% if (user.category == 1) { %>
+    <% if (user.category_id == 1) { %>
     <li><a href='/productos/crearproducto'>+</a></li>
     <% } %>
     <% } else {%>

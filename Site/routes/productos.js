@@ -17,12 +17,12 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 //----------------------------------------------------------------------
 
-router.get('/', controller.index)
+/* router.get('/', controller.index) */
 router.get('/carrito', controller.carrito)
 
 
 // Rutas para mostrar la vista y crear el producto
-router.get('/crearproducto', publicRoutes ,controller.create)
+router.get('/crearproducto', publicRoutes, controller.create)
 router.post('/crearproducto', upload.any(), controller.store)
 
 // ruta para acceder al detalle de un producto

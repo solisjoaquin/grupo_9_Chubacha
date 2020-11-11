@@ -1,26 +1,32 @@
-<!-- <header>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-        </ul>
-    </nav>
-</header> -->
-
 <nav>
   <input type="checkbox" id="check">
   <label for="check" class="checkbtn">
     <i class="fas fa-bars"></i>
   </label>
   <label class="logo"><a class="logo-a" href="/">Chubacha</a></label>
+
   <ul>
     <!-- <li><a class="" href="/">Home</a></li> -->
     <!-- <li><a href='/users/login'>Iniciar sesion</a></li> -->
     <!-- <li><a href='/productos/crearproducto'>+</a></li> -->
 
     <% if(locals.user){ %>
-    <a style="color: white;" href="/users/profile"><%= user.name %></a>
-    <li><a class="" href="/users/logout">Logout</a></li>
+    <!-- <a style="color: white;" href="/users/profile"><%= user.name %></a> -->
+    <!-- <li><a class="" href="/users/logout">Logout</a></li> -->
+
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <%= user.name %>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/users/profile">Mi perfil</a>
+        <a class="dropdown-item" href="/users/logout">Logout</a>
+        <!-- <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a> -->
+      </div>
+    </li>
     <% if (user.category_id == 1) { %>
     <li><a href='/productos/crearproducto'>+</a></li>
     <% } %>
@@ -29,5 +35,10 @@
     <% } %>
     <!-- <li><a href="/users/register" class="register" >Registrarse</a></li> -->
     <li> <a href="/productos/carrito" style="font-size:24px"><i class="fa fa-shopping-cart"></i></a></li>
+
+
+
   </ul>
+
+
 </nav>

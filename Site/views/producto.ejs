@@ -55,15 +55,15 @@
     <div class="producto-desc">
 
 
-      <img src="/images/productos/<%= productoAEditar.image %>" alt="Avatar" length="250px" width="250px">
-      <h2>Producto <%= productoAEditar.id %></h2>
-      <h2><%= productoAEditar.name %></h2>
+      <img src="/images/productos/<%= product.image %>" alt="Avatar" length="250px" width="250px">
+      <h2>Producto <%= product.id %></h2>
+      <h2><%= product.name %></h2>
       <h3>Descripcion</h3>
-      <p><%= productoAEditar.description %>.</p>
-      <h3>Categoria</h3>
-      <p><%= productoAEditar.category_id %> </p>
+      <p><%= product.description %>.</p>
+      <!-- <h3>Categoria</h3>
+      <p><%= product.category_id %> </p> -->
       <h3>Precio</h3>
-      <p>$<%= productoAEditar.price %></p>
+      <p>$<%= product.price %></p>
 
     </div>
 
@@ -73,12 +73,12 @@
 
     <% if ( user.category_id == 1){ %>
     <div>
-      <a href="/productos/<%= productoAEditar.id %>/editar">
+      <a href="/productos/<%= product.id %>/editar">
         <button class="button button2" type="button">
           Editar
         </button></a>
 
-      <form method="POST" action="/productos/<%= productoAEditar.id %>?_method=DELETE" method="POST">
+      <form method="POST" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
         <button class="button button1" type="submit">
           <a>Eliminar</a>
         </button>

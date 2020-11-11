@@ -172,7 +172,7 @@ h1 {
   label.logo {
     color: #f2f2f2;
     font-size: 33px;
-    line-height: 70px;
+    /* line-height: 70px; */
     /* line-height: 80px; */
     padding: 20px;
     font-weight: 600;

@@ -8,10 +8,10 @@ const publicRoutes = require('../middlewares/publicRoutes') // middleware para b
 var multer = require('multer')
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'data')
+    cb(null, 'public/images/productos')
   },
   filename: function (req, file, cb) {
-    cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname))
+    cb(null, 'product-' + Date.now() + path.extname(file.originalname))
   }
 })
 var upload = multer({ storage: storage })
@@ -23,7 +23,7 @@ router.get('/carrito', controller.carrito)
 
 // Rutas para mostrar la vista y crear el producto
 router.get('/crearproducto', publicRoutes, controller.create)
-router.post('/crearproducto', upload.any(), controller.store)
+router.post('/crearproducto', upload.single("image"), controller.store)
 
 // ruta para acceder al detalle de un producto
 router.get('/:id', controller.detailproduct)

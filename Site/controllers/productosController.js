@@ -7,41 +7,40 @@ const { products } = require("../database/models");
 const productosController = {
 
   index: (req, res) => {
-    const productosJSON = fs.readFileSync("productos.json", {
-      encoding: "utf-8",
-    });
-    const productos = JSON.parse(productosJSON);
-    res.render("productos", { productos: productos });
-  },
-
-  detailproduct: (req, res) => {
-    let idProducto = req.params.id;
-    idProducto = idProducto - 1;
-
-    products.findAll().then((products) => {
-      const productoAEditar = products[idProducto];
-      res.render("producto", { productoAEditar, idProducto });
-    });
-  },
-
-  carrito: (req, res) => {
     /* const productosJSON = fs.readFileSync("productos.json", {
       encoding: "utf-8",
     });
     const productos = JSON.parse(productosJSON);
-    res.render("carrito", { productos: productos }); */
+    res.render("productos", { productos: productos }); */
+
+    products.findAll()
+      .then(products => {
+        /* res.send(products);  */
+        res.render('productos', { products })
+      })
+  },
+
+  detailproduct: (req, res) => {
+
+    products.findByPk(req.params.id)
+      .then((product) => {
+        res.render("producto", { product });
+      });
+  },
+
+  carrito: (req, res) => {
 
     res.render("carrito");
   },
 
   edit: (req, res) => {
-    let idProducto = req.params.id;
-    idProducto = idProducto - 1;
 
-    products.findAll().then((products) => {
-      const productoAEditar = products[idProducto];
-      res.render("editarproducto", { productoAEditar, idProducto });
-    });
+
+    products.findByPk(req.params.id)
+      .then((product) => {
+        res.render("editarproducto", { product });
+      });
+
   },
 
   // GET Producto

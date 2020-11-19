@@ -15,47 +15,44 @@ const productosController = {
       })
   },
 
+  //trae la vista del producto 
   detailproduct: (req, res) => {
 
+    // findByPk me permite traer un elemento especifico de la base de dato
+    // usando la primary key
     products.findByPk(req.params.id)
       .then((product) => {
         res.render("producto", { product });
       });
   },
 
+  // este metodo trae la vista del carrito 
   carrito: (req, res) => {
-
     res.render("carrito");
   },
 
+  // este metodo trae la vista de editar producto
   edit: (req, res) => {
-
 
     products.findByPk(req.params.id)
       .then((product) => {
         res.render("editarproducto", { product });
       });
-
   },
 
-  // GET Producto
+  // este metodo trae la vista de crear producto
   create: (req, res) => {
     res.render("crearproducto");
-
-
-
   },
 
+  // Este metodo usa el metodo post para crear un producto
   // CREAR Producto POST
   store: (req, res) => {
 
     let error = validationResult(req);
-
-
-    console.log(req.body)
+    /*     console.log(req.body) */
 
     if (error.isEmpty()) {
-
 
       let newProduct = req.body;
 
@@ -75,10 +72,9 @@ const productosController = {
     } else {
       res.render("crearProducto", { errors: error.mapped(), body: req.body });
     }
-
-
   },
 
+  // este metodo se utiliza para editar un producto
   // EDITAR Producto POST
   update: (req, res) => {
 
@@ -91,9 +87,6 @@ const productosController = {
     }
 
     delete updateProduct.oldImage;
-
-    // groupId = groupsModel.update(group);
-    // res.redirect('/groups/' + groupId)
 
     products.update(updateProduct, { where: { id: req.params.id } })
       .then(updateProduct => {
@@ -108,8 +101,6 @@ const productosController = {
     existingProduct = await products.findByPk(req.params.id);
 
     let imagePath = path.join(__dirname, '../public/images/productos/' + existingProduct.image);
-    console.log('THis is the path');
-    console.log(imagePath);
 
     products.destroy({ where: { id: req.params.id } })
       .then(deletedGroup => {

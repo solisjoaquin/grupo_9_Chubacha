@@ -5,7 +5,7 @@ var path = require('path')
 var multer = require('multer')
 const validate = require('../validators/users')
 
-const userRoutes = require('../middlewares/guestRouter') // middleware para bloquear rutas para usuarios
+const userRoutes = require('../middlewares/guestRouter')
 
 
 let { check, validationResult, body } = require('express-validator')

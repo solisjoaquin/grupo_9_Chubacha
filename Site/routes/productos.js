@@ -4,6 +4,7 @@ var controller = require('../controllers/productosController.js')
 var path = require('path')
 const publicRoutes = require('../middlewares/publicRoutes') // middleware para bloquear rutas para no usuarios
 const validateProduct = require('../validators/products')
+const onlyAdmins = require('../middlewares/log')
 
 // manejo de archivos----------------------------------------------------
 var multer = require('multer')
@@ -23,14 +24,14 @@ router.get('/carrito', controller.carrito)
 
 
 // Rutas para mostrar la vista y crear el producto
-router.get('/crearproducto', publicRoutes, controller.create)
+router.get('/crearproducto', publicRoutes, onlyAdmins, controller.create)
 router.post('/crearproducto', upload.single("image"), validateProduct.create, controller.store)
 
 // ruta para acceder al detalle de un producto
 router.get('/:id', controller.detailproduct)
 
 // ruta para acceder a la vista de editar un producto
-router.get('/:id/editar', publicRoutes, controller.edit)
+router.get('/:id/editar', publicRoutes, onlyAdmins, controller.edit)
 
 // ruta que permite editar el valor de un producto
 router.put('/:id', upload.single("image"), controller.update)

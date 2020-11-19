@@ -18,8 +18,6 @@ const indexController = {
         /* res.send(products);  */
         res.render('index', { products })
       })
-
-    /* res.render('index', { producto: productos }) */
   }
 }
 

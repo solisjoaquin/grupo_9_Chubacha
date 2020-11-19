@@ -6,11 +6,11 @@
   <%- include('partials/header.ejs') %>
 
   <div class="limiter">
-    <form action="/productos/<%= (product.id) %>?_method=PUT" method="POST">
+    <form action="/productos/<%= (product.id) %>?_method=PUT" method="POST" enctype="multipart/form-data">
       <div class="container-login100">
         <div class="product_div">
           <p>Nombre del producto</p>
-          <input class="input100" type="text" name="name" value="<%= product.name %>">
+          <input class="input100" type="text" name="name" required value="<%= product.name %>">
           <span class="focus-input100"></span>
 
           <p>Descripcion</p>
@@ -18,19 +18,21 @@
           <span class="focus-input100"></span>
 
           <p>Precio</p>
-          <input class="input100" type="text" name="price" value="<%= product.price %>">
+          <input class="input100" type="text" name="price" required value="<%= product.price %>">
           <span class="focus-input100"></span>
 
           <p>Categoria</p>
-          <select name="category_id" id="productos">
-            <option value="Teclados">Teclado</option>
-            <option value="Mouse">Mouse</option>
-            <option value="Auriculares">Auricular</option>
-            <option value="Monitores">CPU</option>
+          <select name="category_id" id="productos" required>
+            <option value="Teclado" <%= 'Teclado' == product.category_id ? 'selected': null %>>Teclado</option>
+            <option value="Mouse" <%= 'Mouse' == product.category_id ? 'selected': null %>>Mouse</option>
+            <option value="Auricular" <%= 'Auricular' == product.category_id ? 'selected': null %>>Auricular
+            </option>
+            <option value="CPU" <%= 'CPU' == product.category_id ? 'selected': null %>>CPU</option>
           </select>
         </div>
         <div>
-          <input class="input100" type="file" id="image" name="image" accept="image/*" value="<%= product.image %>">
+          <input class="input100" required type="file" id="image" name="image" accept="image/*"
+            value="<%= product.image %>">
 
           <span class="focus-input100"></span>
 

@@ -14,63 +14,81 @@
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
 
+                <h2 style="text-align: center;">
+                    <%= locals.errors && errors.emailRepeat ? errors.emailRepeat.msg : '' %>
+                </h2>
+                <form action="/users/register" method="POST">
 
+                    <span class="login100-form-title palabraLogin">
+                        Registrarse
+                    </span>
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" required name="name"
+                            value="<%= locals.body && body.name ? body.name : '' %>" placeholder="Nombre" type="text">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <p style="color: red;"><%= locals.errors && errors.name ? errors.name.msg : '' %></p>
 
-                <form class="login100-form validate-form flex-sb flex-w" method="POST" action="/users/register"
+                    <!-- APELLIDO -->
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" required name="last_name" placeholder="Apellido" type="text"
+                            value="<%= locals.body && body.last_name ? body.last_name : '' %>">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <!-- CORREO ELECTRONICO -->
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input type="email" class="input100" required name="email" placeholder="Correo electronico"
+                            value="<%= locals.body && body.email ? body.email : '' %>">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <p style="color: red;"><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
+
+                    <!-- PASSWORD -->
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input type="password" class="input100" type="password" name="password" required
+                            placeholder="Contraseña" value="<%= locals.body && body.password ? body.password : '' %>">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <p style="color: red;"><%= locals.errors && errors.password ? errors.password.msg : '' %></p>
+                    <input type="submit" value="registrarse" class="login100-form-btn">
+                </form>
+
+                <!-- <form class="login100-form validate-form flex-sb flex-w" method="POST" action="/users/register"
                     enctype="multipart/form-data">
-                    <!--Titulo de registrarse-->
+
                     <span class="login100-form-title palabraLogin">
                         Registrarse
                     </span>
 
-                    <!-- NOMBRE -->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
                         <input class="input100" required name="name" placeholder="Nombre" type="text">
                         <span class="focus-input100"></span>
                     </div>
 
-                    <!-- APELLIDO -->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" required name="lastname" placeholder="Apellido" type="text">
+                        <input class="input100" required name="last_name" placeholder="Apellido" type="text">
                         <span class="focus-input100"></span>
                     </div>
 
-                    <!-- CORREO ELECTRONICO -->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
                         <input type="email" class="input100" required name="email" placeholder="Correo electronico">
                         <span class="focus-input100"></span>
                     </div>
 
-                    <!-- PASSWORD -->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
                         <input type="password" class="input100" type="password" name="password" required
                             placeholder="Contraseña">
                         <span class="focus-input100"></span>
                     </div>
 
-                    <!-- CONFIRMACION PASSWORD -->
-                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input type="password" class="input100" type="password" name="verifypassword" required
-                            placeholder="Confirmar contraseña">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <!-- CARGA IMAGEN PERFIL -->
-                    <!-- <div>
-                        <h3>Por favor carga una imagen de perfil para continuar</h3><br>
-                        <input type="file" name="avatar"><br>
-                    </div> -->
-
-                    <!--REGISTRO -->
                     <div class="container-login100-form-btn m-t-17">
-                        <input onclick="window.location.href = '/users/profile';" type="submit" value="registrarse"
-                            class="login100-form-btn">
-                        </input>
+                        <input type="submit" value="registrarse" class="login100-form-btn">
+
                     </div>
 
 
 
-                </form>
+                </form> -->
 
 
 

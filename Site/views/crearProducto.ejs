@@ -5,35 +5,47 @@
 <body>
     <%- include('partials/header.ejs') %>
 
+
+
     <div class="limiter">
+
+
+
         <form method="POST" action="/productos/crearproducto" enctype="multipart/form-data">
             <div class="container-login100">
 
                 <div class="product_div">
 
                     <p>Nombre del producto</p>
-                    <input class="input100" type="text" name="name">
+                    <input class="input100" type="text" required name="name"
+                        value="<%= locals.body && body.name ? body.name : '' %>">
                     <span class="focus-input100"></span>
+                    <p style="color: red;"><%= locals.errors && errors.name ? errors.name.msg : '' %></p>
 
                     <p>Descripcion</p>
                     <input class="input100" type="text" name="description">
                     <span class="focus-input100"></span>
 
+
                     <p>Precio</p>
-                    <input class="input100" type="text" name="price" placeholder="0000.00">
+                    <input class="input100" type="text" name="price" required placeholder="0000.00"
+                        value="<%= locals.body && body.price ? body.price : '' %>">
                     <span class="focus-input100"></span>
+                    <p style="color: red;"><%= locals.errors && errors.price ? errors.price.msg : '' %></p>
 
                     <p>Categoria</p>
-                    <select name="category_id" id="productos">
+                    <select name="category_id" id="productos" required>
                         <option value="Teclado">Teclados</option>
                         <option value="Mouse">Mouse</option>
                         <option value="Auricular">Auriculares</option>
-                        <option value="CPU">CPU</option>
+                        <option value="CPU" selected="selected">CPU</option>
                     </select>
+                    <p style="color: red;"><%= locals.errors && errors.category_id ? errors.category_id.msg : '' %></p>
                 </div>
                 <div>
-                    <input class="input100" type="file" name="image" id="image" accept="image/*">
+                    <input class="input100" type="file" required name="image" id="image" accept="image/*">
                     <span class="focus-input100"></span>
+                    <p style="color: red;"><%= locals.errors && errors.image ? errors.image.msg : '' %></p>
 
                     <div class="button_carrito">
                         <input class="login100-form-btn" type="reset" value="reset">

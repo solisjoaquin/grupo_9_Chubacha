@@ -34,7 +34,7 @@ const apiController = {
             res.json({
                 meta: {
                     status: 200,
-                    totalProducts: users.length,
+                    totalUsers: users.length,
                     url: "/api/products",
                 },
                 data: users,

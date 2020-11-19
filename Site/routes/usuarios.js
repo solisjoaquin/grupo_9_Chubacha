@@ -8,7 +8,7 @@ const validate = require('../validators/users')
 const userRoutes = require('../middlewares/guestRouter') // middleware para bloquear rutas para usuarios
 
 
-let {check, validationResult, body} = require('express-validator')
+let { check, validationResult, body } = require('express-validator')
 
 
 
@@ -25,11 +25,11 @@ var upload = multer({ storage: storage })
 
 router.get('/', userController.index)
 // Login de usuario 
-router.get('/login', userRoutes ,userController.login)
-router.post('/login', validate.login ,userController.authenticate)
+router.get('/login', userRoutes, userController.login)
+router.post('/login', validate.login, userController.authenticate)
 router.get('/logout', userController.logout);
 router.get('/register', userRoutes, userController.register)
-router.post('/register', upload.any(), userController.store)
+router.post('/register', validate.register, userController.store)
 
 router.get('/profile', userController.profile)
 

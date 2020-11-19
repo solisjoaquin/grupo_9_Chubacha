@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    
-</style>
+<%- include('partials/head') %>
 
-<%- include('partials/head') %> 
 <body class="profile">
     <%- include('partials/header') %>
-    <div class="container-profile">
-        <h1>Bienvenido al Portal de usuarios de nuestro Sitio!</h1><br>
 
-    </div> 
-    <%- include('partials/footer') %> 
+    <div class="container">
+        <div class="row" style="margin: 3% ;">
+
+
+            <div class="col-sm">
+                <img src="/images/productos/yoda.png" width="300" height="250" alt="">
+            </div>
+
+            <div class="col-sm" style="margin: auto; margin-top: 40px; margin-bottom: 40px;">
+                <% if(locals.user){ %>
+                <h1 style="color: black;">Informacion de tu perfil</h1>
+                <h1>Nombre: <%= user.name %></h1>
+                <h1>Apellido: <%= user.last_name %></h1>
+                <h2>email: <%= user.email %></h2>
+                <a class="btn btn-primary" href="#" role="button">Editar</a>
+                <% }%>
+
+            </div>
+
+        </div>
+
+
+        <div class="card text-center">
+            <div class="card-header">
+                <h1>Tu historial de compras</h1>
+            </div>
+            <div class="card-body">
+                <p>Tu carrito esta vacio :(</p>
+                <!-- <h5 class="card-title">Special title treatment</h5> -->
+                <a href="#" class="btn btn-primary">Ver ofertas</a>
+            </div>
+            <!-- <div class="card-footer text-muted">
+                2 days ago
+            </div> -->
+        </div>
+    </div>
+    <%- include('partials/footer') %>
 </body>
+
 </html>

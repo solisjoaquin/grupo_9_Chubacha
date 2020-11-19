@@ -3,6 +3,7 @@ var router = express.Router()
 var controller = require('../controllers/productosController.js')
 var path = require('path')
 const publicRoutes = require('../middlewares/publicRoutes') // middleware para bloquear rutas para no usuarios
+const validateProduct = require('../validators/products')
 
 // manejo de archivos----------------------------------------------------
 var multer = require('multer')
@@ -17,13 +18,13 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 //----------------------------------------------------------------------
 
-/* router.get('/', controller.index) */
+router.get('/', controller.index)
 router.get('/carrito', controller.carrito)
 
 
 // Rutas para mostrar la vista y crear el producto
 router.get('/crearproducto', publicRoutes, controller.create)
-router.post('/crearproducto', upload.single("image"), controller.store)
+router.post('/crearproducto', upload.single("image"), validateProduct.create, controller.store)
 
 // ruta para acceder al detalle de un producto
 router.get('/:id', controller.detailproduct)
@@ -32,7 +33,7 @@ router.get('/:id', controller.detailproduct)
 router.get('/:id/editar', publicRoutes, controller.edit)
 
 // ruta que permite editar el valor de un producto
-router.put('/:id', controller.update)
+router.put('/:id', upload.single("image"), controller.update)
 
 // ruta que permite borrar un producto
 router.delete('/:id', controller.delete)

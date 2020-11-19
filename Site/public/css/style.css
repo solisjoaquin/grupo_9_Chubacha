@@ -1,14 +1,5 @@
-/* body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-}
- */
-
- @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 /*INDEX CSS*/
 .imgheader {
@@ -130,7 +121,7 @@ h1 {
 * {
   margin: 0;
   padding: 0;
-  color: #d9d9d9;
+/*   color: #d9d9d9; */
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   list-style: none;
@@ -791,4 +782,47 @@ y del envio se ponen en columna*/
 
 .button_carrito input, .button_carrito button {
   margin: 25px;
+}
+
+
+
+.icon-footer {
+  color:white
+}
+
+
+.container-404 {
+  position: relative;
+  text-align: center;
+  background-image: url('/images/404.jpg');
+}
+
+.titulo-404 {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.sin-cuenta {
+  padding: 10px;
+  color: black;
+}
+
+.sin-cuenta a {
+  padding-left: 5px;
+  color: orangered;
+}
+
+.jumbotron {
+  background-color: orangered;
+}
+
+.jumbotron h1,
+.jumbotron .lead,
+.jumbotron h3,
+.jumbotron p {
+  color: white;
 }

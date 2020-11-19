@@ -21,7 +21,7 @@ const userController = {
   },
 
   authenticate: function (req, res) {
-    let error = validationResult(req);
+    var error = validationResult(req);
     /* console.log(error.mapped) */
 
     if (error.isEmpty()) {
@@ -29,7 +29,7 @@ const userController = {
       users.findAll().then((users) => {
 
         const user = users.find(user => user.email == req.body.email);
-        console.log(user)
+        /* console.log(user) */
 
 
         if (user) {
@@ -41,6 +41,7 @@ const userController = {
             res.render("login", {
               errors: { password: { msg: "El password es incorrecto" } },
               user: req.body,
+              body: req.body,
             });
           }
         }
@@ -63,7 +64,7 @@ const userController = {
 
       /* res.send( user || 'No se encontro el usuario') */
     } else {
-      res.render("login", { errors: error.mapped() });
+      res.render("login", { errors: error.mapped(), body: req.body });
     }
   },
 
@@ -82,29 +83,83 @@ const userController = {
     res.render("profile.ejs");
   },
 
-  store: (req, res, next) => {
-    const user = {
-      nombre: req.body.name,
-      lastname: req.body.lastname,
-      email: req.body.email,
-      contraseña: req.body.password,
-      avatar: req.files[0].filename,
-    };
-    const archivoUsuarios = fs.readFileSync("usuarios.json", {
-      encoding: "utf-8",
-    });
-    let users;
-    if (archivoUsuarios === "") {
-      users = [];
-    } else {
-      users = JSON.parse(archivoUsuarios);
-    }
-    users.push(user);
+  store: (req, res) => {
 
-    const usuariosJSON = JSON.stringify(users);
-    fs.writeFileSync("usuarios.json", usuariosJSON);
-    res.redirect("/");
-  },
+    let error = validationResult(req);
+
+    if (error.isEmpty()) {
+
+      users.findAll().then((newUsers) => {
+        const user = newUsers.find(user => user.email == req.body.email);
+        if (user) {
+          /* return res.send('el correo esta en uso'); */
+          return res.render("register", {
+            errors: { emailRepeat: { msg: "el correo ya esta registrado, intenta con otro correo" } }
+          });
+
+        } else {
+          let newUser = req.body;
+          newUser.avatar = 'default.png';
+          newUser.category_id = 2; // normal user
+          newUser.password = bcrypt.hashSync(req.body.password, 10);
+
+          users.create(newUser)
+            .then(newUser => {
+              req.session.user = newUser
+              return res.redirect('/')
+            })
+        }
+
+
+      })
+
+    } else {
+      res.render("register", { errors: error.mapped(), body: req.body });
+    }
+
+  }
+
+
+  /*     let newUser = req.body;
+      newUser.avatar = 'default.png';
+      newUser.category_id = 2; // normal user
+      newUser.password = bcrypt.hashSync(req.body.password, 10);
+  
+  
+      users.create(newUser)
+        .then(newUser => {
+          req.session.user = newUser
+          return res.redirect('/')
+        })
+   */
+
+  /*     let newUser = req.body;
+  
+      users.findAll().then((users) => {
+  
+        const userEmailCheck = users.find(user => user.email == req.body.email);
+  
+        if (userEmailCheck) {
+  
+          res.render("register", {
+            errors: { email: { msg: "El email ya esta existe para otro usuario" } },
+            user: req.body,
+          });
+  
+        } else {
+  
+          newUser.password = bcrypt.hashSync(req.body.password, 10);
+          users.create(newUser)
+            .then(newUser => {
+              req.session.user = newUser;
+              return res.redirect('/')
+            })
+        }
+  
+      }) */
+
+
+
 };
 
 // EXPORT

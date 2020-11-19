@@ -1,21 +1,16 @@
 const fs = require("fs");
 const path = require('path')
 const { products } = require("../database/models");
+const { check, validationResult, body } = require("express-validator");
 // const path = require('path')
 
 // ACTION
 const productosController = {
 
   index: (req, res) => {
-    /* const productosJSON = fs.readFileSync("productos.json", {
-      encoding: "utf-8",
-    });
-    const productos = JSON.parse(productosJSON);
-    res.render("productos", { productos: productos }); */
 
     products.findAll()
       .then(products => {
-        /* res.send(products);  */
         res.render('productos', { products })
       })
   },
@@ -54,47 +49,34 @@ const productosController = {
   // CREAR Producto POST
   store: (req, res) => {
 
-    /* let errors = validationResult(req);
-
-    if (errors.isEmpty()) { */
+    let error = validationResult(req);
 
 
-    let newProduct = req.body;
-    newProduct.image = 'default.png';
+    console.log(req.body)
 
-    if (req.file) {
-      newProduct.image = req.file.filename;
-    } else if (req.body.oldImage) {
-      newProduct.image = req.body.oldImage;
+    if (error.isEmpty()) {
+
+
+      let newProduct = req.body;
+
+      if (req.file) {
+        newProduct.image = req.file.filename;
+      } else if (req.body.oldImage) {
+        newProduct.image = req.body.oldImage;
+      }
+
+      delete newProduct.oldImage;
+
+      products.create(newProduct)
+        .then(newProduct => {
+          return res.redirect('/')
+        })
+
+    } else {
+      res.render("crearProducto", { errors: error.mapped(), body: req.body });
     }
 
-    delete newProduct.oldImage;
 
-    products.create(newProduct)
-      .then(newProduct => {
-        return res.redirect('/')
-        /* return res.redirect('/products/' + newProduct.id); */
-      })
-
-
-    /*  } */
-
-    /*  else {
-        // let categories = categoriesModel.all();
-
-        category.findAll()
-            .then(categories => {
-                return res.render('products/create',  { 
-                    categories,
-                    errors: errors.mapped(), 
-                    products: req.body
-                });
-            })
-            .catch(error => {
-                console.log(error);
-                return res.redirect('/');
-            })
-    } */
   },
 
   // EDITAR Producto POST

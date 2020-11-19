@@ -5,17 +5,6 @@
 <head>
     <!--PARTIAL HEAD-->
     <%- include('partials/head.ejs') %>
-    <style>
-        .sin-cuenta {
-            padding: 10px;
-            color: black;
-        }
-
-        .sin-cuenta a {
-            padding-left: 5px;
-            color: orangered;
-        }
-    </style>
 </head>
 
 <body>
@@ -29,20 +18,23 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
+
                 <form class="login100-form validate-form flex-sb flex-w" action="/users/login" method="POST">
                     <span class="login100-form-title palabraLogin">
                         Login
                     </span>
 
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" required name="email" placeholder="Correo electronico">
+                        <input class="input100" required name="email" placeholder="Correo electronico"
+                            value="<%= locals.body && body.email ? body.email : '' %>">
                         <span class="focus-input100"></span>
                     </div>
                     <p style="color: red;"><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
 
                     <!-- INICIO input para la contraseña-->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="password" placeholder="Contraseña">
+                        <input class="input100" type="password" name="password" placeholder="Contraseña"
+                            value="<%= locals.body && body.password ? body.password : '' %>">
                         <span class="focus-input100"></span>
                     </div>
                     <p style="color: red;"><%= locals.errors && errors.password ? errors.password.msg : '' %></p>

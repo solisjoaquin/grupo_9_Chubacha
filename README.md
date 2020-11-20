@@ -1,4 +1,20 @@
-##   CHUBACHA "Tecnologia de Otra Galaxia"   
+##   CHUBACHA "Tecnologia de Otra Galaxia" 
+
+
+![img](https://github.com/solisjoaquin/grupo_9_Chubacha/Design/chubacha-screenshot.PNG)
+
+## Como instalar el proyecto
+
+```
+git clone https://github.com/solisjoaquin/grupo_9_Chubacha
+
+cd grupo_9_Chubacha/Site/
+
+npm i
+
+npm start
+```
+
 
 ## ¿Qué productos o servicios brindará nuestro sitio?   🎮🕹🔊⌨🖱🎚
     Los productos que ofreceremos a la venta serán los relacionados al rubro 

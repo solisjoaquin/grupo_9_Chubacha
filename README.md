@@ -1,7 +1,7 @@
 ##   CHUBACHA "Tecnologia de Otra Galaxia" 
 
 
-![img](https://github.com/solisjoaquin/grupo_9_Chubacha/Design/chubacha-screenshot.PNG)
+![img](https://github.com/solisjoaquin/grupo_9_Chubacha/blob/master/Design/chubacha-screenshot.PNG)
 
 ## Como instalar el proyecto
 
